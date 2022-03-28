@@ -2,19 +2,22 @@
 import React from 'react';
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import './index.css';
+import Theme from './styles/theme';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ViewportProvider from './components/resize/Resize';
+import ViewportProvider from './components/Resize/Resize';
+import './index.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ViewportProvider>
+  <ViewportProvider>
+    <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <Theme>
+          <App />
+        </Theme>
       </BrowserRouter>
-    </ViewportProvider>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </ViewportProvider>,
   document.getElementById('root')
 );
 

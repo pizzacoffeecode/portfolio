@@ -1,5 +1,8 @@
 import 'dotenv/config'
 import LogRocket from 'logrocket';
+
+
+
 LogRocket.init('az3p9v/portfolio');
 LogRocket.identify(process.env.USERID, {
     name: 'backend',

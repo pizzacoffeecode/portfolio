@@ -1,0 +1,236 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 100px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+header.sticky {
+    height: 60px;
+
+}
+
+header .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: repeat;
+
+    /* transition: 1s; */
+    background-image: url('../../assets/bg_black.webp'),
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 100%);
+    opacity: 1;
+}
+
+header .banner__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    opacity: 0.8;
+
+    border-bottom: rgba(255, 39, 95, 0);
+    border-width: 0px;
+    border-style: solid;
+}
+
+header.sticky .banner {
+    transition: 2s;
+    opacity: 0;
+}
+
+header.sticky .banner__overlay {
+    transition: 2s;
+    width: 100vw;
+    background-color: rgba(50, 50, 50, 1);
+    opacity: 0.9;
+
+
+    border-bottom: rgba(255, 39, 95, 0.5);
+    border-width: 0 0 2px 0;
+    border-style: double;
+}
+
+
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 700;
+    transition: 1s;
+    text-decoration: none;
+}
+
+header.sticky .logo {
+    position: absolute;
+    font-size: 1.5em;
+    left: 100px;
+    transform: translate(-0%, -50%);
+}
+
+nav {
+    position: relative;
+    display: flex;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translateX(100px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+header.sticky nav ul {
+    transform: translateX(0);
+    transition-delay: 0.2s;
+    opacity: 1;
+    visibility: visible;
+}
+
+header.sticky nav ul {
+    transform: translateX(0);
+    transition-delay: 0.2s;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* NAV MOBILE*/
+
+nav {
+    position: relative;
+    display: flex;
+    z-index: 1;
+
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translateX(100px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav ul li a {
+    font-size: 1.5em;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ff275f;
+}
+
+
+
+@media(max-width: 1024px) {
+    header {
+        padding: 40px;
+        height: calc(60px)
+    }
+
+    header.banner__overlay {}
+
+    header .banner {}
+
+    header.sticky .logo {
+        left: 40px;
+        font-size: 1.2em;
+    }
+
+
+    header.sticky nav ul {
+        font-size: 2em;
+    }
+
+    header.sticky .toggle {
+        position: fixed;
+        top: 15px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        /* background: #fff url('../../assets/menu.png'); */
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 10;
+    }
+
+    header.sticky .toggle.active {
+        /* background: #fff url('../../assets/close.png'); */
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* NAV DESKTOP*/
+
+    nav.active ul {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100vw;
+        height: calc(100%);
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* 
+    @keyframes gradient-change {
+        0% {
+            left: -200%;
+            top: -200%;
+        }
+
+        50% {
+            left: 0%;
+            top: 0%;
+        }
+
+        100% {
+            left: -200%;
+            top: -200%;
+        }
+    } */
+}

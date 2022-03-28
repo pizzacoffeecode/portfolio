@@ -1,11 +1,16 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { HomeWrapper } from './HomeStyles';
+import { Section } from '../components/Section/Section';
+import Projects from '../components/Projects/Projects';
+import Hero from '../components/Hero/Hero';
+
 
 const Home = () => {
     return (
-        <>
-            <div>Home</div>
-        </>
+        <HomeWrapper>
+            <Hero />
+            <Projects />
+        </HomeWrapper>
     )
 }
 
