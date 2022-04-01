@@ -60,7 +60,7 @@ header.sticky .banner__overlay {
     opacity: 0.9;
 
 
-    border-bottom: rgba(255, 39, 95, 0.5);
+    border-bottom: rgba(238, 238, 238, 1);
     border-width: 0 0 2px 0;
     border-style: double;
 }

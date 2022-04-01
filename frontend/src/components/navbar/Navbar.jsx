@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { viewportContext } from '../Resize/Resize'
 import { mediaQueries } from '../../services/data';
+import BackgroundAnimation from '../BackgroundAnimation/BackgroundAnimation';
 
 import HamburgerSpin from '../Hamburger/HamburgerSpin';
 
@@ -77,7 +78,8 @@ const Navbar = () => {
             <div className='banner'></div>
             <div className="banner__overlay" />
             <Link to="#" className="logo">
-                david<span style={ { color: 'gray' } }>bushen.</span>
+                <span style={ { color: 'gray' } }>david</span>
+                <span style={ { color: '#ff275f' } }>bushen.</span>
             </Link>
             <div className="toggle">
                 {
@@ -86,6 +88,7 @@ const Navbar = () => {
                 }
             </div>
             <nav>
+
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
@@ -94,7 +97,9 @@ const Navbar = () => {
                     <li><Link to="/backend">Backend</Link></li>
                 </ul>
             </nav>
+
         </header >
+
     )
 }
 

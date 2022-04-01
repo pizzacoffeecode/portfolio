@@ -1,0 +1,35 @@
+.bg_anim {
+    background-image: url('../assets/portfolio_bg.svg');
+    width: 100vw;
+    height: 100vh;
+    background-size: 100px 100px;
+
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.bg_gradient {
+
+    /* ff 3.6+ */
+    background: -moz-radial-gradient(circle at 70% 20%, rgba(58, 9, 47, 0.9) 0%, rgba(24, 5, 75, 0.9) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(circle at 70% 20%, rgba(58, 9, 47, 0.9) 0%, rgba(24, 5, 75, 0.9) 100%);
+
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 70% 20%, rgba(58, 9, 47, 0.9) 0%, rgba(24, 5, 75, 0.9) 100%);
+
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 70% 20%, rgba(58, 9, 47, 0.9) 0%, rgba(24, 5, 75, 0.9) 100%);
+
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 70% 20%, rgba(58, 9, 47, 0.9) 0%, rgba(24, 5, 75, 0.9) 100%);
+
+
+
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: -1;
+}

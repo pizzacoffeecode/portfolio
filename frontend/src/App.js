@@ -17,6 +17,7 @@ import './App.css';
 
 
 
+
 LogRocket.init('az3p9v/portfolio');
 LogRocket.identify(process.env.REACT_APP_USERID, {
   name: 'frontend',
@@ -32,7 +33,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="about" element={ <About /> } />

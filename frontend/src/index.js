@@ -13,7 +13,11 @@ ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
         <Theme>
-          <App />
+          <div className='bg_anim'>
+            <div className="bg_gradient">
+              <App />
+            </div>
+          </div>
         </Theme>
       </BrowserRouter>
     </React.StrictMode>

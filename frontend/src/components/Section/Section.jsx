@@ -65,7 +65,7 @@ font-size: 24px;
 line-height: 40px;
 font-weight: 300;
 padding-bottom: 3.6rem;
-color: rgba(255, 255, 255, 0.5);
+color: #FFFFFF;
 
 @media ${ (props) => props.theme.breakpoints.md } {
   max-width: 670px;
@@ -182,7 +182,7 @@ align-items: center;
 justify-content: center;
 margin: ${ ({ alt, form }) => (alt || form) ? '0' : '0 0 80px' };
 color: #fff;
-background: ${ ({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)' };
+background: ${ ({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(360deg, #292929CC 0%, #ff275f 100%)' };
 cursor: pointer;
 transition: 0.5s ease;
 position: relative;
@@ -214,7 +214,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: ${ ({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)' };
+background: ${ ({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #292929CC 0%, #ff275f 100%)' };
 opacity: ${ ({ disabled }) => disabled ? '.5' : '1' };
 transition: .4s ease;
 font-size: ${ ({ alt }) => alt ? '20px' : '24px' };
@@ -236,7 +236,7 @@ box-shadow: ${ ({ disabled }) => disabled ? 'inset 0px 2px 1px rgba(46, 49, 55, 
 }
 
 &:disabled{
-  background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+  background: linear-gradient(270deg, #00DBD8 0%, #ff275f 100%);
   opacity: 0.5;
   box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
 }
