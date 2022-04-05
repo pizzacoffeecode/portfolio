@@ -56,11 +56,11 @@ header.sticky .banner {
 header.sticky .banner__overlay {
     transition: 2s;
     width: 100vw;
-    background-color: rgba(50, 50, 50, 1);
+    background-color: rgb(6, 1, 22, 0.95);
     opacity: 0.9;
 
 
-    border-bottom: rgba(238, 238, 238, 1);
+    border-image: linear-gradient(45deg, rgba(0, 194, 255, 0.5), rgba(250, 0, 255, 0.6)) 1;
     border-width: 0 0 2px 0;
     border-style: double;
 }
@@ -72,11 +72,18 @@ header .logo {
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
+    font-family: var(--font-button);
     font-size: 10vw;
     color: #fff;
     font-weight: 700;
     transition: 1s;
     text-decoration: none;
+}
+
+.bush {
+    background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header.sticky .logo {
@@ -92,6 +99,7 @@ nav {
 }
 
 nav ul {
+    font-family: var(--font-button);
     position: relative;
     display: flex;
     transition: 0.25s;
