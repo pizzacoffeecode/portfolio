@@ -2,8 +2,8 @@ export const leveldata = [
     {
         skill: "MongoDb",
         level: 5,
-        color1: "#FF275F",
-        color2: "#9E0B31",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskill: {
             skill: "",
             level: 0
@@ -12,8 +12,8 @@ export const leveldata = [
     {
         skill: "Express JS",
         level: 6,
-        color1: "#FF275F",
-        color2: "#9E0B31",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskills: {
             Hooks: 3,
             "Functional Components": 9
@@ -22,8 +22,8 @@ export const leveldata = [
     {
         skill: "React JS",
         level: 9,
-        color1: "#FF275F",
-        color2: "#9E0B31",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskills: {
             Hooks: 3,
             "Functional Components": 9
@@ -32,8 +32,8 @@ export const leveldata = [
     {
         skill: "React Native",
         level: 6,
-        color1: "#FF275F",
-        color2: "#9E0B31",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskill: {
             skill: "",
             level: 0
@@ -42,18 +42,28 @@ export const leveldata = [
     {
         skill: "Node Js",
         level: 7,
-        color1: "#FF275F",
-        color2: "#9E0B31",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskills: {
             Hooks: 3,
             "Functional Components": 9
         },
     },
     {
+        skill: "TypeScript",
+        level: 3,
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
+        subskill: {
+            skill: "",
+            level: 0
+        },
+    },
+    {
         skill: "C#",
         level: 7,
-        color1: "#FFD000",
-        color2: "#FF8400",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskill: {
             skill: "",
             level: 0
@@ -62,8 +72,8 @@ export const leveldata = [
     {
         skill: "Unity Engine",
         level: 7,
-        color1: "#FFD000",
-        color2: "#FF8400",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskill: {
             skill: "",
             level: 0
@@ -72,8 +82,8 @@ export const leveldata = [
     {
         skill: "Blazor / XAML",
         level: 4,
-        color1: "#FFD000",
-        color2: "#FF8400",
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(250, 0, 255, 1)",
         subskill: {
             skill: "",
             level: 0

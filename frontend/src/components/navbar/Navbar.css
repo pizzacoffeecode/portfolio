@@ -80,8 +80,16 @@ header .logo {
     text-decoration: none;
 }
 
-.bush {
+header .bush {
+    /* background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1)); */
+    color: #ff275f;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+header.sticky .bush {
     background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1));
+    /* color: #ff275f; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
