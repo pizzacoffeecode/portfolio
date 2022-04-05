@@ -6,16 +6,16 @@ import { LeftSection, RightSection } from './HeroStyles';
 import BackgroundAnimation from './../BackgroundAnimation/BackgroundAnimation';
 
 const Hero = () => (
-    <Section row nopadding>
+    <Section row nopadding alignCenter>
         <LeftSection>
             <SectionTitle main center>
-                Hello <br />
-                &nbsp;&nbsp; I'm David
-                {/* Welcome To <br /> 
-                Air Interactive */}
+                Hello
+            </SectionTitle>
+            <SectionTitle main center>
+                I'm David
             </SectionTitle>
             <SectionText>
-                Full Stack Mobile and Web Developer.
+                Web, Mobile, and Game Developer.
 
             </SectionText>
             <Button onClick={ () => window.location = 'https://google.com' }>Learn More</Button>

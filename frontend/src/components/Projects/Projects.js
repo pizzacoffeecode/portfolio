@@ -8,19 +8,15 @@ import { projects } from '../../services/data';
 
 // p is just projects like p => p.stuff  ...i is the index | t is the tags array which is a property of the data obj
 
-console.log(process.env.PUBLIC_URL);
-
-
-
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section nopadding id="projects" >
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
       { projects.map((p, i) => {
         return (
           <BlogCard key={ i }>
-            <img src={ `${ process.env.PUBLIC_URL }/images/${ p.image }` } style={ { width: '400px', objectFit: "contain" } } />
+            <Img src={ `${ process.env.PUBLIC_URL }/images/${ p.image }` } />
             <TitleContent>
               <HeaderThree title>{ p.title }</HeaderThree>
               <Hr />

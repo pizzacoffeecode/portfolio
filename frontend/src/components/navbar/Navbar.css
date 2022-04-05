@@ -157,7 +157,7 @@ nav ul li a:hover {
 @media(max-width: 1024px) {
     header {
         padding: 40px;
-        height: calc(60px)
+
     }
 
     header.banner__overlay {}

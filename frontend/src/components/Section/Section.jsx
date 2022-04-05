@@ -3,58 +3,67 @@ import styled from 'styled-components'
 export const Section = styled.section`
 display: ${ (props) => props.grid ? "grid" : "flex" };
 flex-direction: ${ (props) => props.row ? "row" : "column" };
+
+align-items: ${ (props) => props.alignCenter ? "center" : "unset" };
+grid-auto-flow : ${ (props) => props.gridrow ? "row" : "column" };
+
+grid-template-columns: ${ (props) => props.cols };
+
 padding: ${ (props) => props.nopadding ? "0" : "32px 48px 0" } ;
-padding-top: 100px;
+
 margin: auto;
-margin-top: 60px;
 max-width: 1040px;
 box-sizing: content-box;
 position: relative;
-overflow: hidden;
-grid-template-columns: 1fr 1fr;
+margin-top: 20px;
+min-height: 100vh;
+justify-content: center;
 
-/* @media ${ (props) => props.theme.breakpoints.md } {
+@media ${ (props) => props.theme.breakpoints.md } {
   padding: 24px 48px 0;
   flex-direction: column;
   
-} */
+}
 
 @media ${ (props) => props.theme.breakpoints.lg } {
   padding: ${ (props) => props.nopadding ? "0" : "16px 16px 0" } ;
 
-  width: calc(100vw - 32px);
+  width: calc(100% - 32px);
   flex-direction: column;
-  margin-top: 80px;
 }
 `
 
 export const SectionTitle = styled.h2`
 font-weight: 800;
 font-size: ${ (props) => props.main ? '65px' : '56px' };
-line-height: ${ (props) => props.main ? '72px' : '56px' };
+/* line-height: ${ (props) => props.main ? '72px' : '56px' }; */
 width: max-content;
 max-width: 100%;
 background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-margin-top: 10%;
+
 margin-bottom: 16px;
-padding: ${ (props) => props.main ? '58px 0 16px' : '0' };
+/* padding: ${ (props) => props.main ? '58px 0 16px' : '0' }; */
 
 @media ${ props => props.theme.breakpoints.md }{
   font-size: ${ (props) => props.main ? '56px' : '48px' };
-  line-height: ${ (props) => props.main ? '56px' : '48px' };
+  /* line-height: ${ (props) => props.main ? '56px' : '48px' };
   margin-bottom: 12px;
-  padding: ${ (props) => props.main ? '40px 0 12px' : '0' };
+  padding: ${ (props) => props.main ? '40px 0 12px' : '0' }; */
 }
 
 @media ${ props => props.theme.breakpoints.sm }{
-  font-size: 32px;
-  line-height: 40px;
-  font-size: ${ (props) => props.main ? '28px' : '32px' };
-  line-height: ${ (props) => props.main ? '32px' : '40px' };
-  margin-bottom: 8px;
-  padding: ${ (props) => props.main ? '16px 0 8px' : '0' };
+  font-size: 40px;
+  /* line-height: 5px; */
+  /* font-size: ${ (props) => props.main ? '28px' : '32px' }; */
+  /* line-height: ${ (props) => props.main ? '32px' : '40px' }; */
+  /* margin-top: -40px; */
+  /* margin-bottom: 32px; */
+  margin-left: 32px;
+  margin-right: 32px;
+
+  /* padding: ${ (props) => props.main ? '16px 0 8px' : '0' }; */
   max-width: 100%;
 }
 `
@@ -77,7 +86,11 @@ color: #FFFFFF;
 @media ${ (props) => props.theme.breakpoints.sm } {
   font-size: 16px;
   line-height: 24px;
-  padding-bottom: 16px;
+  padding-bottom: 40px;
+
+  margin-left: 32px;
+  margin-right: 32px;
+  margin: 60px 32px 32px 32px;
 }
 `
 
@@ -89,7 +102,7 @@ border-radius: 10px;
 background-color: #fff;
 background: ${ (props) => props.colorAlt ?
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)' };
+    'linear-gradient(270deg, #292929CC 0%, #ff275f 100%)' };
 
   margin: ${ (props) => props.divider ? "4rem 0" : "" };
 
@@ -197,10 +210,12 @@ opacity: ${ ({ disabled }) => disabled ? '.5' : '1' };
 }
 
 @media ${ (props) => props.theme.breakpoints.sm } {
-  width: 100%;
+  width: 80%;
   height: 32px;
   font-size: 14px;
   margin-bottom: ${ ({ alt }) => alt ? '0' : '32px' };
+  margin-left: 32px;
+  margin-right: 32px;
 }
 `
 
