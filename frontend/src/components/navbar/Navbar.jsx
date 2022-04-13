@@ -96,9 +96,9 @@ const Navbar = () => {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/compscience">C-Science</Link></li>
-                    <li><Link to="/frontend">Frontend</Link></li>
-                    <li><Link to="/backend">Backend</Link></li>
+                    <li><Link to="/compscience">Projects</Link></li>
+                    <li><Link to="/frontend">Skills</Link></li>
+                    <li><Link to="/backend">Contact</Link></li>
                 </ul>
             </nav>
 

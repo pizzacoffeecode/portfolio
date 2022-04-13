@@ -19,7 +19,8 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Innovating one project at a time</Slogan>
+          {/* <Slogan>Innovating one project at a time</Slogan> */ }
+          <Slogan>Website Created in React JS by Me!</Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons href="https://google.com">

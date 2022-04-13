@@ -20,10 +20,14 @@ position: relative;
   border-radius: 10px;
   /* box-shadow: 3px 3px 20px #00ccff; */
   text-align: center;
-  width: 700px;
+
+  min-width: 400px;
+  width: 100%;
   max-width: 900px;
 
   min-height: 900px;
+  height: fit-content;
+
   background-color: rgba(0, 0, 0, 1);
 
   &::before {
@@ -74,6 +78,11 @@ export const Img = styled.img`
   overflow: hidden;
   padding: 6px;
   border-radius: 10px;
+
+  @media ${ (props) => props.theme.breakpoints.sm } {
+    object-fit: cover;
+
+  }
 `
 export const TitleContent = styled.div`
   color: #9cc9e3;
