@@ -78,8 +78,12 @@ const Navbar = () => {
             <div className='banner'></div>
             <div className="banner__overlay" />
             <Link to="#" className="logo">
-                <span style={ { color: 'gray' } }>david</span>
-                <span className="bush">bushen.</span>
+
+                <span className='title__bg'>
+                    <span style={ { color: 'gray' } }>david</span>
+                    <span className="bush">bushen.</span>
+                </span>
+                <span className="bushen__bg">bushen.</span>
             </Link>
             <div className="toggle">
                 {

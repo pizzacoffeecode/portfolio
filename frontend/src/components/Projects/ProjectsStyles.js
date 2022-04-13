@@ -1,21 +1,11 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
-  width:100%;
-  min-height : 300px;
-  max-height : 300px;
-  object-fit: cover;
-  overflow: hidden;
-  padding: 6px;
-  border-radius: 10px;
-`
-
 export const GridContainer = styled.section`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 padding: 3rem;
 place-items: center;
-column-gap: 2rem;
+/* column-gap: 2rem; */
 row-gap: 3rem;
 @media ${ (props) => props.theme.breakpoints.sm } {
   display: flex;
@@ -25,18 +15,68 @@ row-gap: 3rem;
 }
 
 `
-export const BlogCard = styled.div`
+export const BlogCardBG = styled.div`
+position: relative;
   border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+  /* box-shadow: 3px 3px 20px #00ccff; */
   text-align: center;
-  width: 400px;
-  height: 1050px;
-  background-color: rgba(50, 50, 50, 1);
+  width: 700px;
+  max-width: 900px;
+
+  min-height: 900px;
+  background-color: rgba(0, 0, 0, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: white;
+    top: -4px;
+    left: -4px;
+    bottom: -4px;
+    right: -4px;
+    background: linear-gradient(315deg, #00ccff, rgba(0, 0, 0, 1), #d400d4);
+    transform: skewX(1deg) skewY(2deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: white;
+    top: -4px;
+    left: -4px;
+    bottom: -4px;
+    right: -4px;
+    background: linear-gradient(315deg, #00ccff, rgba(0, 0, 0, 1), #d400d4);
+    transform: skewX(1deg) skewY(2deg);
+    filter: blur(25px);
+  }
+
   @media ${ (props) => props.theme.breakpoints.sm } {
     width: 100%;
   }
 `;
+
+export const BlogCardFG = styled.span`
+position: absolute;
+top:0;
+left:0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 1);
+z-index: 1;
+`;
+
+export const Img = styled.img`
+  width:100%;
+  min-height : 400px;
+  max-height : 300px;
+  object-fit: contain;
+  overflow: hidden;
+  padding: 6px;
+  border-radius: 10px;
+`
 export const TitleContent = styled.div`
+  color: #9cc9e3;
   text-align: center;
   z-index: 20;
   width: 100%;
@@ -45,11 +85,12 @@ export const TitleContent = styled.div`
 
 
 export const HeaderThree = styled.h3`
+  font-family: var(--font-button);
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: .5rem 0;
-  font-size: ${ (props) => props.title ? '3rem' : '2rem' };
+  font-size: ${ (props) => props.title ? '2rem' : '2rem' };
 `;
 
 export const Hr = styled.hr`
@@ -57,7 +98,7 @@ export const Hr = styled.hr`
   height: 3px;
   margin: 20px auto;
   border: 0;
-  background: #d0bb57;
+  background: #9cc9e3;
 `;
 
 export const Intro = styled.div`
@@ -73,9 +114,9 @@ export const Intro = styled.div`
 
 export const CardInfo = styled.p`
   width: 100%;
-  padding: 0 50px;
+  padding: 0px 50px 25px 50px;
   color: #e4e6e7;
-  font-style: 2rem;
+  font-size: 1rem;
   line-height: 24px;
   text-align: justify;
   @media ${ (props) => props.theme.breakpoints.sm } {
@@ -87,31 +128,40 @@ export const CardInfo = styled.p`
 
 export const UtilityList = styled.ul`
   list-style-type: none;
-  padding: 0;
+  padding: 0rem;
   display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
+  justify-content: space-evenly;
+  margin: 15px 0 15px 0;
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
+color:black;
+font-size: 1.3rem;
 padding:1rem 1.5rem;
-background: #6b3030;
+background: #9cc9e3;
 border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
+text-decoration: none;
 
+
+&:hover{
+  transition: background 0.5s;
+  background: #00ccff;
 }
 `;
 
 export const TagList = styled.ul`
-display: flex;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+list-style-type: none;
+/* place-items: center; */
+/* column-gap: 2rem; */
+row-gap: 1.5rem;
 justify-content: space-around;
+white-space: nowrap;
 padding: 2rem;
 `
 export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
+/* color:#ff275f; */
+color:lightgray;
+font-size: 1.3rem;
 `

@@ -63,6 +63,9 @@ header.sticky .banner__overlay {
     border-image: linear-gradient(45deg, rgba(0, 194, 255, 0.5), rgba(250, 0, 255, 0.6)) 1;
     border-width: 0 0 2px 0;
     border-style: double;
+
+    filter: drop-shadow(0px 0px 10px #4444dd);
+
 }
 
 
@@ -81,10 +84,25 @@ header .logo {
 }
 
 header .bush {
-    /* background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1)); */
-    color: #ff275f;
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    position: absolute;
+    background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1));
+    /* color: #ff275f; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+header .bushen__bg {
+
+    background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1));
+    /* background: white; */
+    filter: blur(25px);
+
+    opacity: 0.5;
+    z-index: 4;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
 }
 
 header.sticky .bush {
@@ -249,4 +267,14 @@ nav ul li a:hover {
             top: -200%;
         }
     } */
+
+    @keyframes blur-change {
+        from {
+            filter: blur(10px);
+        }
+
+        to {
+            filter: blur(100px);
+        }
+    }
 }

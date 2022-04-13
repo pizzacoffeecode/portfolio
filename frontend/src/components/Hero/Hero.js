@@ -4,6 +4,7 @@ import { Section, SectionText, SectionTitle } from '../Section/Section';
 import Button from '../Button/Button';
 import { LeftSection, RightSection } from './HeroStyles';
 import BackgroundAnimation from './../BackgroundAnimation/BackgroundAnimation';
+import Pizza from './../BackgroundAnimation/Pizza'
 
 const Hero = () => (
     <Section row nopadding alignCenter>
@@ -22,6 +23,7 @@ const Hero = () => (
         </LeftSection>
         <RightSection>
             <BackgroundAnimation />
+            {/* <Pizza /> */ }
         </RightSection>
     </Section>
 );

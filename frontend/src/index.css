@@ -42,7 +42,7 @@ code {
 }
 
 
-.bg_anim {
+/* .bg_anim {
   background-image: url('./assets/portfolio_bg.svg');
   width: 100vw;
   height: 100%;
@@ -50,7 +50,7 @@ code {
 
   background-repeat: repeat;
   z-index: -1;
-}
+} */
 
 
 .bg_gradient {
