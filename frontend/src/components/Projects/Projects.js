@@ -10,7 +10,7 @@ import { projects } from '../../services/data';
 
 const Projects = () => (
   <Section nopadding id="projects" >
-    <SectionDivider />
+    <SectionDivider divider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
       { projects.map((p, i) => {

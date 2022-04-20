@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FooterWrapper = styled.section`
-	width: calc(100vw - 96px);
+	width: calc(100% - 96px);
   max-width: 1040px;
   padding: 2rem 48px 40px;
   margin: 1rem auto;
@@ -9,7 +9,7 @@ export const FooterWrapper = styled.section`
 
   @media ${ props => props.theme.breakpoints.sm } {
     padding: 0 16px 48px;
-    width: calc(100vw - 32px);
+    width: calc(100% - 32px);
   }
 `
 
@@ -54,7 +54,7 @@ justify-content: space-between;
 
 @media ${ props => props.theme.breakpoints.sm }{
   display: flex;
-	width: 100vw;
+	width: 100%;
   flex-direction: column;
 }
 `
@@ -124,12 +124,12 @@ export const LinkList = styled.ul`
 	}
 
 	@media ${ props => props.theme.breakpoints.md } {
-		width: 100vw;
+		width: 100%;
 		padding: 32px 0 16px;
 		gap: 16px;
 	}
 	@media ${ props => props.theme.breakpoints.sm } {
-		width: 100vw;
+		width: 100%;
 		padding: 32px 4px 16px;
 		gap: 5px;
 	}
@@ -139,7 +139,7 @@ export const LinkColumn = styled.div`
 	display: flex;
 	flex-direction: column;
 	max-width: 220px;
-	width: 100vw;
+	width: 100%;
 `
 export const LinkTitle = styled.h4`
 	font-style: normal;

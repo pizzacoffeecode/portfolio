@@ -9,29 +9,37 @@ grid-auto-flow : ${ (props) => props.gridrow ? "row" : "column" };
 
 grid-template-columns: ${ (props) => props.cols };
 
-padding: ${ (props) => props.nopadding ? "0" : "32px 48px 0" } ;
+padding: ${ (props) => props.nopadding ? "0" : "50px 48px 0" } ;
 
 margin: auto;
 max-width: 1040px;
+
 box-sizing: content-box;
 position: relative;
 margin-top: 20px;
-min-height: 100vh;
 justify-content: center;
 
+z-index: 2;
+
+@media ${ (props) => props.theme.breakpoints.sm } {
+  flex-direction: column;
+}
 @media ${ (props) => props.theme.breakpoints.md } {
   padding: 24px 48px 0;
-  flex-direction: column;
+
   
 }
 
 @media ${ (props) => props.theme.breakpoints.lg } {
   padding: ${ (props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
   width: calc(100% - 32px);
-  flex-direction: column;
+
 }
 `
+
+
+
+
 
 export const SectionTitle = styled.h2`
 
@@ -60,7 +68,7 @@ margin-bottom: 16px;
   /* font-size: ${ (props) => props.main ? '28px' : '32px' }; */
   /* line-height: ${ (props) => props.main ? '32px' : '40px' }; */
   /* margin-top: -40px; */
-  /* margin-bottom: 32px; */
+  margin-bottom: 10px;
   margin-left: 32px;
   margin-right: 32px;
 
@@ -87,11 +95,42 @@ color: #FFFFFF;
 @media ${ (props) => props.theme.breakpoints.sm } {
   font-size: 16px;
   line-height: 24px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   margin-left: 32px;
   margin-right: 32px;
-  margin: 60px 32px 32px 32px;
+  margin: 40px 32px 32px 32px;
+}
+`
+
+export const SectionTextFull = styled.p`
+text-align: justify;
+max-width: 100%;
+font-size: 24px;
+line-height: 40px;
+font-weight: 300;
+padding: 1rem 3.9rem 3rem 3.5rem;
+place-items: center;
+color: #FFFFFF;
+
+@media ${ (props) => props.theme.breakpoints.md } {
+  max-width: 670px;
+  font-size: 20px;
+  line-height: 32px;
+  padding-bottom: 20px;
+
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+@media ${ (props) => props.theme.breakpoints.sm } {
+  font-size: 16px;
+  line-height: 24px;
+  padding: unset;
+  padding-bottom: 20px;
+
+  margin-left: 32px;
+  margin-right: 32px;
 }
 `
 
@@ -104,7 +143,7 @@ background-color: #fff;
 background: ${ (props) => props.colorAlt ?
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
     'linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1))' };
-  margin: ${ (props) => props.divider ? "4rem 0" : "" };
+  margin-bottom: ${ (props) => props.divider ? "4rem" : "" };
 
 @media ${ (props) => props.theme.breakpoints.md } {
   width: 48px;

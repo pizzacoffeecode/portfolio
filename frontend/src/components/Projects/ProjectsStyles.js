@@ -7,11 +7,17 @@ padding: 3rem;
 place-items: center;
 /* column-gap: 2rem; */
 row-gap: 3rem;
+height: auto;
+
 @media ${ (props) => props.theme.breakpoints.sm } {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 0;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
+}
+
+@media ${ (props) => props.theme.breakpoints.md } {
+
 }
 
 `
@@ -21,14 +27,16 @@ position: relative;
   /* box-shadow: 3px 3px 20px #00ccff; */
   text-align: center;
 
-  min-width: 400px;
+
   width: 100%;
   max-width: 900px;
 
-  min-height: 900px;
-  height: fit-content;
+  min-height: 1000px;
+  height: auto;
 
   background-color: rgba(0, 0, 0, 1);
+
+  /* overflow: hidden; */
 
   &::before {
     content: '';
@@ -40,6 +48,7 @@ position: relative;
     right: -4px;
     background: linear-gradient(315deg, #00ccff, rgba(0, 0, 0, 1), #d400d4);
     transform: skewX(1deg) skewY(2deg);
+
   }
 
   &::after {
@@ -53,10 +62,12 @@ position: relative;
     background: linear-gradient(315deg, #00ccff, rgba(0, 0, 0, 1), #d400d4);
     transform: skewX(1deg) skewY(2deg);
     filter: blur(25px);
+    
   }
 
   @media ${ (props) => props.theme.breakpoints.sm } {
     width: 100%;
+    height: fit-content;
   }
 `;
 
@@ -72,16 +83,16 @@ z-index: 1;
 
 export const Img = styled.img`
   width:100%;
-  min-height : 400px;
+  min-height : 505px;
   max-height : 300px;
   object-fit: contain;
   overflow: hidden;
-  padding: 6px;
+  padding: 6px 6px 0 6px;
   border-radius: 10px;
 
   @media ${ (props) => props.theme.breakpoints.sm } {
     object-fit: cover;
-
+    min-height : unset;
   }
 `
 export const TitleContent = styled.div`
@@ -89,7 +100,10 @@ export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
-
+  margin-top: 1.5rem;
+  @media ${ (props) => props.theme.breakpoints.md } {
+    margin-top: 0.5rem;
+}
 `;
 
 
@@ -129,8 +143,7 @@ export const CardInfo = styled.p`
   line-height: 24px;
   text-align: justify;
   @media ${ (props) => props.theme.breakpoints.sm } {
-    padding:.3rem
-  
+    padding:.3rem;
 }
 `;
 
@@ -141,6 +154,12 @@ export const UtilityList = styled.ul`
   display: flex;
   justify-content: space-evenly;
   margin: 15px 0 15px 0;
+
+  @media ${ (props) => props.theme.breakpoints.sm } {
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 1rem 2rem;
+}
 `;
 
 export const ExternalLinks = styled.a`
@@ -168,9 +187,19 @@ row-gap: 1.5rem;
 justify-content: space-around;
 white-space: nowrap;
 padding: 2rem;
+
+@media ${ (props) => props.theme.breakpoints.sm } {
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  row-gap: 1rem;
+
+  /* grid-template-columns: unset;
+  grid-template-rows: repeat(1fr); */
+}
+
 `
 export const Tag = styled.li`
 /* color:#ff275f; */
 color:lightgray;
 font-size: 1.3rem;
+
 `

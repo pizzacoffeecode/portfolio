@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { viewportContext } from '../Resize/Resize'
 import { mediaQueries } from '../../services/data';
-import BackgroundAnimation from '../BackgroundAnimation/BackgroundAnimation';
+import BackgroundAnimation from '../svg/BackgroundAnimation/BackgroundAnimation';
 
 import HamburgerSpin from '../Hamburger/HamburgerSpin';
 

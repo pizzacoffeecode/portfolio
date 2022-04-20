@@ -3,8 +3,8 @@ import React from 'react';
 import { Section, SectionText, SectionTitle } from '../Section/Section';
 import Button from '../Button/Button';
 import { LeftSection, RightSection } from './HeroStyles';
-import BackgroundAnimation from './../BackgroundAnimation/BackgroundAnimation';
-import Pizza from './../BackgroundAnimation/Pizza'
+import BackgroundAnimation from './../svg/BackgroundAnimation/BackgroundAnimation';
+import Pizza from './../svg/Pizza/Pizza'
 
 const Hero = () => (
     <Section row nopadding alignCenter>

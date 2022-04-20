@@ -1,28 +1,47 @@
 import styled from 'styled-components';
 
 export const LeftSection = styled.div`
-  width: 100%;
-  height: 100%;
+  height: 100vh;
   scroll-snap-align: start;
-  flex-direction: column;
+
+  padding: 15rem 0 0rem 0;
+  /* padding-bottom: 20px; */
+
+  margin-left: 32px;
+  margin-right: 32px;
+  align-items: center;
+  justify-content: center;
+
   @media ${ (props) => props.theme.breakpoints.sm } {
-    margin: 0 auto;
+    height: 70vh;
+    padding: unset;
+    padding-top: 20vh;
+
   }
   @media ${ (props) => props.theme.breakpoints.md } {
-    margin: 0 auto;
+
+
+  }
+  @media ${ (props) => props.theme.breakpoints.lg } {
+
   }
 `;
 
 export const RightSection = styled.div`
-  width: 100%;
-  height: 100%;
+
   scroll-snap-align: start;
-  flex-direction: column;
-  padding-bottom: 18%;
+  margin-top: -2rem;
+  width: 30vw;
+
+
   @media ${ (props) => props.theme.breakpoints.sm } {
-    display: none;
+    height: 30vh;
   }
   @media ${ (props) => props.theme.breakpoints.md } {
-    display:none;
+    /* display:none;
+    visibility: hidden; */
+  }
+  @media ${ (props) => props.theme.breakpoints.lg } {
+
   }
 `;
