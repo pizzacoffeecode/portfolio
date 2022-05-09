@@ -1,5 +1,3 @@
-
-
 import LogRocket from 'logrocket';
 
 import { Routes, Route } from "react-router-dom";
@@ -13,9 +11,6 @@ import CompScience from './pages/CompScience';
 import Frontend from './pages/Frontend';
 import Backend from './pages/Backend';
 import './App.css';
-
-
-
 
 
 LogRocket.init('az3p9v/portfolio');

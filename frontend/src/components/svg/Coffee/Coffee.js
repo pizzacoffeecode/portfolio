@@ -14,9 +14,11 @@ function Coffee() {
             coffeeSVG.style.width = '50vw';
             coffeeContainer.style.marginLeft = "33vw";
             coffeeSVG.style.height = '200px';
-        } else {
+        }
+        else {
             coffeeSVG.setAttribute('viewBox', '0 0 210 210');
             coffeeSVG.style.height = '400px';
+            coffeeSVG.style.marginLeft = '11vw';
         }
         // console.log(coffeeSVG.getAttribute('viewBox'));
     }, [ width ]);
