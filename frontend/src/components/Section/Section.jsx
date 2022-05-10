@@ -25,9 +25,7 @@ z-index: 2;
   flex-direction: column;
 }
 @media ${ (props) => props.theme.breakpoints.md } {
-  padding: 24px 48px 0;
-
-  
+  padding: 24px 48px 0; 
 }
 
 @media ${ (props) => props.theme.breakpoints.lg } {

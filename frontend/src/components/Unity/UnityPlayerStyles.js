@@ -15,12 +15,17 @@ export const UtilityList = styled.ul`
 `;
 
 export const ExternalLinks = styled.a`
+text-align: center;
 color:black;
 font-size: 1.3rem;
 padding:1rem 1.5rem;
 background: #9cc9e3;
 border-radius: 15px;
 text-decoration: none;
+
+/* @media ${ (props) => props.theme.breakpoints.sm } {
+  padding:1rem 0.2rem;
+} */
 
 
 &:hover{
@@ -49,4 +54,12 @@ export const HeaderThree = styled.h3`
   color: #9cc9e3;
   padding: .5rem 0;
   font-size: ${ (props) => props.title ? '2rem' : '2rem' };
+  
+  @media ${ (props) => props.theme.breakpoints.sm } {
+  margin-left: 32px;
+  margin-right: 32px;
+  justify-self: start;
+}
+
+
 `;

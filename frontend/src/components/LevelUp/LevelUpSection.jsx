@@ -19,11 +19,12 @@ const LevelUpSection = () => {
     });
 
     return (
-        <Section flex >
+        <Section >
             <SectionDivider />
             <SectionTitle main>Skills</SectionTitle>
-            { levels }
-
+            <div style={ { width: "88%", alignSelf: "center" } }>
+                { levels }
+            </div>
         </Section >
     )
 }

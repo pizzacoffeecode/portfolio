@@ -13,12 +13,12 @@ height: auto;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 0.5rem 0 0.5rem;
 }
 
-@media ${ (props) => props.theme.breakpoints.md } {
+/* @media ${ (props) => props.theme.breakpoints.md } {
 
-}
+} */
 
 `
 export const BlogCardBG = styled.div`

@@ -2,6 +2,7 @@ import React from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
 import { Section, SectionText, SectionTitle } from "../Section/Section";
 import { UtilityList, ExternalLinks, HeaderThree } from './UnityPlayerStyles';
+import './unityPlayer.css';
 
 const unityContext = new UnityContext({
     loaderUrl: "Build/Observer.loader.js",
@@ -25,15 +26,7 @@ export function UnityPlayer() {
             <SectionTitle>Design Patterns</SectionTitle>
             <HeaderThree> Observer Pattern</HeaderThree>
             <SectionText>i really want to talk about stuff</SectionText>
-            <Unity unityContext={ unityContext } className={ "game-canvas" } style={ {
-                alignSelf: "center",
-                justifySelf: "center",
-                height: "500px",
-                // maxWidth: "50vw",
-                width: "800px",
-                border: "2px solid black",
-                background: "grey",
-            } } />
+            <Unity unityContext={ unityContext } className={ "gameCanvas" } />
 
             <UtilityList>
                 <ExternalLinks href={ "https://google.com" }>Code</ExternalLinks>

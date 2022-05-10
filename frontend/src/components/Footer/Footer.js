@@ -20,7 +20,7 @@ const Footer = () => {
       <SocialIconsContainer>
         <CompanyContainer>
           {/* <Slogan>Innovating one project at a time</Slogan> */ }
-          <Slogan>Website Created in React JS by Me!</Slogan>
+          <Slogan>Website Created in React JS by me</Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons href="https://google.com">
