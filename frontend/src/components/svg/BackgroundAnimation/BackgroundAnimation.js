@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { viewportContext } from '../../Resize/Resize';
-
+import pizzaPng from "../../../assets/pizza.png";
 function BackgroundAnimation() {
 
   const { width } = useContext(viewportContext);
@@ -11,22 +11,29 @@ function BackgroundAnimation() {
     const BgAnimation = document.getElementById('BgAnimation');
     console.log(width);
     if (width < 640) {
-      pizza.setAttribute('viewBox', '-100 -250 1000 1000');
-      BgAnimation.setAttribute('viewBox', '-300 0 800 600');
-      document.getElementById('BgAnimationContainer').style.marginLeft = "-200%";
-      document.getElementById('BgAnimationContainer').style.marginTop = "-70%";
-      document.getElementById('BgAnimationContainer').style.width = "500px";
-      document.getElementById('BgAnimationContainer').style.height = "500px";
+      // pizza.setAttribute('viewBox', '-100 -250 1000 1000');
+      // BgAnimation.setAttribute('viewBox', '-300 0 800 600');
+      // document.getElementById('BgAnimationContainer').style.marginLeft = "-200%";
+      // document.getElementById('BgAnimationContainer').style.marginTop = "-70%";
+      // document.getElementById('BgAnimationContainer').style.width = "500px";
+      // document.getElementById('BgAnimationContainer').style.height = "500px";
+      document.getElementById('BgAnimationContainer').style.display = "hidden";
+      pizza.setAttribute('display', 'none');
+      BgAnimation.setAttribute('display', 'none');
     } else if (width < 1024) {
       pizza.setAttribute('viewBox', '-180 -250 1000 1000');
       BgAnimation.setAttribute('viewBox', '100 0 600 600');
       document.getElementById('BgAnimationContainer').style.marginLeft = "unset";
       document.getElementById('BgAnimationContainer').style.marginTop = "unset";
+      pizza.setAttribute('display', 'unset');
+      BgAnimation.setAttribute('display', 'unset');
     } else {
       pizza.setAttribute('viewBox', '-240 -125 700 700');
       BgAnimation.setAttribute('viewBox', '50 0 400 400');
       document.getElementById('BgAnimationContainer').style.marginLeft = "unset";
       document.getElementById('BgAnimationContainer').style.marginTop = "unset";
+      pizza.setAttribute('display', 'unset');
+      BgAnimation.setAttribute('display', 'unset');
     }
 
     console.log(pizza.getAttribute('viewBox'));
@@ -34,7 +41,14 @@ function BackgroundAnimation() {
 
 
   return (
-    <div id="BgAnimationContainer" >
+
+    <div id="BgAnimationContainer" style={ { alignitems: "center", justifyContent: "center" } }>
+      {
+        width < 640 &&
+        <img width="100%" height={ "auto" } src={ pizzaPng } style={ {
+          paddingTop: "2rem"
+        } } />
+      }
       <svg
         id="BgAnimation"
         fill="none"

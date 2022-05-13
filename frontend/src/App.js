@@ -10,6 +10,9 @@ import About from './pages/About';
 import CompScience from './pages/CompScience';
 import Frontend from './pages/Frontend';
 import Backend from './pages/Backend';
+import UberClone from './pages/UberClone';
+import ObserverPattern from './pages/design_patterns/ObserverPattern';
+import Astar from './pages/algorithms/Astar';
 import './App.css';
 
 
@@ -34,6 +37,9 @@ function App() {
         <Route path="compscience" element={ <CompScience /> } />
         <Route path="frontend" element={ <Frontend /> } />
         <Route path="backend" element={ <Backend /> } />
+        <Route path="uberclone" element={ <UberClone /> } />
+        <Route path="observer" element={ <ObserverPattern /> } />
+        <Route path="astar" element={ <Astar /> } />
       </Routes>
       <Footer />
     </div>

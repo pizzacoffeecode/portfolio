@@ -1,0 +1,19 @@
+.appetize__container {
+    display: flex;
+    align-self: center;
+    align-items: start;
+    justify-content: center;
+    height: auto;
+}
+
+.appetize__frame {
+    display: block;
+    align-self: center;
+    transform: scale(0.9)
+}
+
+@media(max-width: 640px) {
+    .appetize__frame {
+        transform: scale(0.8)
+    }
+}

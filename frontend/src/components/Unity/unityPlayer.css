@@ -2,6 +2,7 @@
     width: 48vw;
     height: 500px;
     align-self: center;
+    justify-self: center;
     border-radius: 10px;
     border-width: 2px;
     border-color: darkblue;
@@ -9,6 +10,19 @@
     box-shadow: 10% 10% 10% 10%;
 }
 
+.unity__container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+/* .appetize__frame {
+    display: block;
+    align-self: center;
+    transform: scale(0.9)
+} */
 
 @media(max-width: 640px) {
     .gameCanvas {
@@ -16,6 +30,9 @@
         height: 300px;
     }
 
+    /* .unity__frame {
+        transform: scale(0.8)
+    } */
 }
 
 @media(max-width: 1024px) {

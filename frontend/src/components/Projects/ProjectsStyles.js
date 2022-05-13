@@ -7,7 +7,7 @@ padding: 3rem;
 place-items: center;
 /* column-gap: 2rem; */
 row-gap: 3rem;
-height: auto;
+min-height: 100%;
 
 @media ${ (props) => props.theme.breakpoints.sm } {
   display: flex;
@@ -162,7 +162,7 @@ export const UtilityList = styled.ul`
 }
 `;
 
-export const ExternalLinks = styled.a`
+export const ExternalLinks = styled.div`
 color:black;
 font-size: 1.3rem;
 padding:1rem 1.5rem;
