@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const HomeWrapper = styled.div`
-  width: 100vw;
+  width: calc(100vw);
   /* max-width: 1280px; */
   /* height: calc(100vh - 60px); */
   margin-top: 100px;
@@ -19,8 +19,7 @@ export const HomeWrapper = styled.div`
 
 
   @media ${ props => props.theme.breakpoints.sm } {
-    padding: 0 16px 48px;
-    width: calc(100vw - 32px);
+    width: calc(100% - 16px);
   }
 `
 

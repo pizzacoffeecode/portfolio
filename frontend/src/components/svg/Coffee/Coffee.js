@@ -5,29 +5,32 @@ function Coffee() {
     const { width } = useContext(viewportContext);
 
 
-    useEffect(() => {
-        const coffeeSVG = document.getElementById('coffeeSvg');
-        const coffeeContainer = document.getElementById('coffeeContainer');
-        // console.log(width);
-        if (width < 768) {
-            coffeeSVG.setAttribute('viewBox', '0 0 100 100');
-            coffeeSVG.style.width = '50vw';
-            coffeeContainer.style.marginLeft = "33vw";
-            coffeeSVG.style.height = '200px';
-        }
-        else {
-            coffeeSVG.setAttribute('viewBox', '0 0 210 210');
-            coffeeSVG.style.height = '400px';
-            coffeeSVG.style.marginLeft = '11vw';
-        }
-        // console.log(coffeeSVG.getAttribute('viewBox'));
-    }, [ width ]);
+    // useEffect(() => {
+    //     const coffeeSVG = document.getElementById('coffeeSvg');
+    //     const coffeeContainer = document.getElementById('coffeeContainer');
+    //     // console.log(width);
+    //     if (width < 768) {
+    //         coffeeSVG.setAttribute('viewBox', '0 0 100 100');
+    //         coffeeSVG.style.width = '50vw';
+    //         coffeeContainer.style.marginLeft = "33vw";
+    //         coffeeSVG.style.height = '200px';
+    //     }
+    //     else {
+    //         coffeeSVG.setAttribute('viewBox', '0 0 210 210');
+    //         coffeeSVG.style.height = '400px';
+    //         coffeeSVG.style.marginLeft = '11vw';
+    //     }
+    //     // console.log(coffeeSVG.getAttribute('viewBox'));
+    // }, [ width ]);
 
 
 
     return (
-        <div id="coffeeContainer" style={ { position: 'relative', zIndex: '1' } }>
-            <svg xmlns="http://www.w3.org/2000/svg" id='coffeeSvg'>
+        <div id="coffeeContainer" style={ { display: "flex", flexDirectrion: "column", position: 'relative', zIndex: '1', height: "000px", width: "100vw", alignItems: "flex-start", justifyContent: "end" } }>
+            <svg xmlns="http://www.w3.org/2000/svg"
+                id='coffeeSvg'
+                viewBox="-500 0 800 800"
+                fill="none">
                 <defs>
                     <style>
 

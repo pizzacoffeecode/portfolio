@@ -7,6 +7,7 @@ import BackgroundAnimation from '../svg/BackgroundAnimation/BackgroundAnimation'
 
 import HamburgerSpin from '../Hamburger/HamburgerSpin';
 
+import mouseicon from '../../assets/mouse.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -15,6 +16,7 @@ const Navbar = () => {
 
     const [ isOpen, setOpen ] = useState(false)
     const [ isSticky, setSticky ] = useState(false)
+    const [ mouseIconClicked, setMouseIconClicked ] = useState(false)
 
     // //? Close Initial Full Page Hero
     useEffect(() => {
@@ -22,6 +24,7 @@ const Navbar = () => {
             const header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY >= 0);
             // this.window.scrollY > 0 ? setSticky(true) : setSticky(false);
+            // header.classList.toggle('sticky', window.onclick);
             setSticky(true);
         });
     }, []);
@@ -53,10 +56,6 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [ scrolled, handleScroll ])
 
-
-
-
-
     useEffect(() => {
         const navigation = document.querySelector('nav')
         document.querySelector('.toggle').onclick = function () {
@@ -72,10 +71,29 @@ const Navbar = () => {
         }
     }, []);
 
+    useEffect(() => {
+        if (mouseIconClicked) {
+            const header = document.querySelector('header');
+            const mouseIcon = document.getElementById("mouse_icon_id")
+            setScrolled(true);
+            mouseIcon.style.display = "none";
+            header.classList.toggle('sticky');
+        }
+    }, [ mouseIconClicked ]);
+
+
     return (
         <header>
 
-            <div className='banner'></div>
+            <div className='banner'>
+                <div className={ 'mouse_icon__container' } id={ "mouse_icon_id" }>
+                    <button className='mouse_icon__button' type="button" onClick={ () => {
+                        setMouseIconClicked(true);
+                    } }>
+                        <img className="mouse_icon" src={ mouseicon } alt="mouse icon" />
+                    </button>
+                </div>
+            </div>
             <div className="banner__overlay" />
             <Link to="#" className="logo">
 

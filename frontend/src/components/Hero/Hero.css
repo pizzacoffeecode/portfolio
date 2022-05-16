@@ -1,0 +1,43 @@
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 60px auto 0 auto;
+    height: calc(100vh - 60px);
+    justify-content: center;
+    max-width: 1024px;
+    /* background-color: #000; */
+}
+
+.left_top__section {
+    display: grid;
+    align-items: center;
+    margin: 3rem auto;
+    /* background-color: green; */
+}
+
+.right_btm__section {
+    display: grid;
+    align-items: center;
+    margin-top: -5%;
+    /* background-color: yellow; */
+}
+
+
+@media only screen and (min-width: 1025px) {
+    .hero__container {
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+        height: calc(100vh - 40px);
+        margin: 40px auto 0 auto;
+    }
+
+    .left_top__section {
+        margin-left: 20%;
+        /* background-color: purple; */
+    }
+
+    .right_btm__section {
+        margin: auto 0;
+        /* background-color: red; */
+    }
+}

@@ -6,51 +6,44 @@ function BackgroundAnimation() {
   const { width } = useContext(viewportContext);
 
 
-  useEffect(() => {
-    const pizza = document.getElementById('pizza');
-    const BgAnimation = document.getElementById('BgAnimation');
-    console.log(width);
-    if (width < 640) {
-      // pizza.setAttribute('viewBox', '-100 -250 1000 1000');
-      // BgAnimation.setAttribute('viewBox', '-300 0 800 600');
-      // document.getElementById('BgAnimationContainer').style.marginLeft = "-200%";
-      // document.getElementById('BgAnimationContainer').style.marginTop = "-70%";
-      // document.getElementById('BgAnimationContainer').style.width = "500px";
-      // document.getElementById('BgAnimationContainer').style.height = "500px";
-      document.getElementById('BgAnimationContainer').style.display = "hidden";
-      pizza.setAttribute('display', 'none');
-      BgAnimation.setAttribute('display', 'none');
-    } else if (width < 1024) {
-      pizza.setAttribute('viewBox', '-180 -250 1000 1000');
-      BgAnimation.setAttribute('viewBox', '100 0 600 600');
-      document.getElementById('BgAnimationContainer').style.marginLeft = "unset";
-      document.getElementById('BgAnimationContainer').style.marginTop = "unset";
-      pizza.setAttribute('display', 'unset');
-      BgAnimation.setAttribute('display', 'unset');
-    } else {
-      pizza.setAttribute('viewBox', '-240 -125 700 700');
-      BgAnimation.setAttribute('viewBox', '50 0 400 400');
-      document.getElementById('BgAnimationContainer').style.marginLeft = "unset";
-      document.getElementById('BgAnimationContainer').style.marginTop = "unset";
-      pizza.setAttribute('display', 'unset');
-      BgAnimation.setAttribute('display', 'unset');
-    }
+  // useEffect(() => {
+  //   const pizza = document.getElementById('pizza');
+  //   const BgAnimation = document.getElementById('BgAnimation');
+  //   console.log(width);
+  //   if (width < 640) {
+  //     // pizza.setAttribute('viewBox', '-100 -250 1000 1000');
+  //     // BgAnimation.setAttribute('viewBox', '-300 0 800 600');
+  //     // document.getElementById('BgAnimationContainer').style.marginLeft = "-200%";
+  //     // document.getElementById('BgAnimationContainer').style.marginTop = "-70%";
+  //     // document.getElementById('BgAnimationContainer').style.width = "500px";
+  //     // document.getElementById('BgAnimationContainer').style.height = "500px";
+  //     document.getElementById('BgAnimationContainer').style.display = "hidden";
+  //     pizza.setAttribute('display', 'none');
+  //     BgAnimation.setAttribute('display', 'none');
+  //   } else if (width < 1024) {
+  //     pizza.setAttribute('viewBox', '-180 -250 1000 1000');
+  //     BgAnimation.setAttribute('viewBox', '100 0 600 600');
+  //     document.getElementById('BgAnimationContainer').style.marginLeft = "unset";
+  //     document.getElementById('BgAnimationContainer').style.marginTop = "unset";
+  //     pizza.setAttribute('display', 'unset');
+  //     BgAnimation.setAttribute('display', 'unset');
+  //   } else {
+  //     pizza.setAttribute('viewBox', '-240 -125 700 700');
+  //     BgAnimation.setAttribute('viewBox', '50 0 400 400');
+  //     document.getElementById('BgAnimationContainer').style.marginLeft = "unset";
+  //     document.getElementById('BgAnimationContainer').style.marginTop = "unset";
+  //     pizza.setAttribute('display', 'unset');
+  //     BgAnimation.setAttribute('display', 'unset');
+  //   }
 
-    console.log(pizza.getAttribute('viewBox'));
-  }, [ width ]);
-
+  //   console.log(pizza.getAttribute('viewBox'));
+  // }, [ width ]);
 
   return (
-
-    <div id="BgAnimationContainer" style={ { alignitems: "center", justifyContent: "center" } }>
-      {
-        width < 640 &&
-        <img width="100%" height={ "auto" } src={ pizzaPng } style={ {
-          paddingTop: "2rem"
-        } } />
-      }
+    <div>
       <svg
-        id="BgAnimation"
+        className="BgAnimation__svg"
+        viewBox="0 0 602 602"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -403,15 +396,17 @@ function BackgroundAnimation() {
             <stop stopColor="#13ADC7" />
             <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
           </linearGradient>
-
         </defs>
-
 
         <svg
           id='pizza'
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          enableBackground="new 0 0 512 512"
+          styles={ { display: "grid", marginLeft: "50%" } }
+          viewBox="0 0 400 800"
+          fill="none"
+
+        // enableBackground="new 0 0 100% 100%"
         >
           <defs>
             <linearGradient id="linearGradient902">
@@ -444,10 +439,7 @@ function BackgroundAnimation() {
           ></path>
         </svg>
       </svg>
-
-
-
-    </div>
+    </div >
   );
 }
 export default BackgroundAnimation;
