@@ -1,11 +1,12 @@
 .gameCanvas {
-    width: 48vw;
+    width: 100%;
     height: 500px;
+    max-height: 500px;
     align-self: center;
     justify-self: center;
-    border-radius: 10px;
+    /* border-radius: 10px;
     border-width: 2px;
-    border-color: darkblue;
+    border-color: darkblue; */
     border-style: ridge;
     box-shadow: 10% 10% 10% 10%;
 }
@@ -18,27 +19,8 @@
     height: auto;
 }
 
-/* .appetize__frame {
-    display: block;
-    align-self: center;
-    transform: scale(0.9)
-} */
-
 @media(max-width: 640px) {
     .gameCanvas {
-        width: 76vw;
         height: 300px;
     }
-
-    /* .unity__frame {
-        transform: scale(0.8)
-    } */
-}
-
-@media(max-width: 1024px) {
-    .gameCanvas {
-        width: 84vw;
-        height: 300px;
-    }
-
 }

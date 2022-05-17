@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Unity, { UnityContext } from "react-unity-webgl";
-import { Section, SectionText, SectionTitle } from "../Section/Section";
-import { BlogCardBG, BlogCardFG, TitleContent, HeaderThree, Hr, UtilityList, ExternalLinks, GridContainer } from '../Projects/ProjectsStyles';
-// import { UtilityList, ExternalLinks, HeaderThree } from './UnityPlayerStyles';
+import { SectionText } from '../../components/Section/Section'
+import { BlogCardFG, TitleContent, HeaderThree, Hr, UtilityList, ExternalLinks, GridContainer } from '../Projects/ProjectsStyles';
+import { UnityBlogCardBG } from './UnityPlayerStyles';
 import './unityPlayer.css';
 
 const unityContext = new UnityContext({
@@ -24,28 +24,24 @@ export function UnityPlayer() {
     }
 
     return (
-        <Section id="unity_app" style={ { marginBottom: "10rem" } }>
-            {/* <SectionDivider divider /> */ }
-            {/* <SectionTitle main>Projects</SectionTitle> */ }
-            <GridContainer>
-                <BlogCardBG style={ { minHeight: "500px" } }>
-                    <BlogCardFG styles={ { justifyContent: "center", alignItems: "center" } }>
-                        <div className="unity__container">
+        <GridContainer id="unity_app" style={ { marginTop: "60px", height: "100vh", alignContent: "start" } }>
+            <UnityBlogCardBG>
+                <BlogCardFG styles={ { alignItems: "center" } }>
+                    <div className="unity__container">
 
-                            <Unity unityContext={ unityContext } className={ "gameCanvas" } />
-                        </div>
-                        <TitleContent>
-                            <HeaderThree title>{ "Observer Pattern" }</HeaderThree>
-                            <Hr />
-                            {/* <SectionText>i really want to talk about stuff</SectionText> */ }
-                        </TitleContent>
-                        <UtilityList style={ { justifyContent: "center", marginBottom: "3rem" } }>
-                            <Link to="/"><ExternalLinks style={ { margin: "0 0.8rem" } }>Back</ExternalLinks></Link>
-                            <a href="https://github.com" target="_blank"><ExternalLinks style={ { margin: "0 0.8rem" } }>Code</ExternalLinks></a>
-                        </UtilityList>
-                    </BlogCardFG>
-                </BlogCardBG>
-            </GridContainer>
-        </Section >
+                        <Unity unityContext={ unityContext } className={ "gameCanvas" } />
+                    </div>
+                    <TitleContent>
+                        <HeaderThree title>{ "Observer Pattern" }</HeaderThree>
+                        <Hr />
+                        <SectionText style={ { marginLeft: "2.5rem" } }>*iOS not currently supported</SectionText>
+                    </TitleContent>
+                    <UtilityList style={ { justifyContent: "center", marginBottom: "3rem" } }>
+                        <Link to="/"><ExternalLinks style={ { margin: "0 0.8rem" } }>Back</ExternalLinks></Link>
+                        <a href="https://github.com" target="_blank"><ExternalLinks style={ { margin: "0 0.8rem" } }>Code</ExternalLinks></a>
+                    </UtilityList>
+                </BlogCardFG>
+            </UnityBlogCardBG>
+        </GridContainer>
     );
 }

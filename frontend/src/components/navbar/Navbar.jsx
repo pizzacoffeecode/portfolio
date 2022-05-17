@@ -41,7 +41,7 @@ const Navbar = () => {
                 behavior: 'auto'
             });
             console.log(event);
-
+            document.getElementById("mouse_icon_id").style.display = "none";
             setTimeout(() => { setScrolled(true) }, 500);
         }
     }, [ setScrolled ])
@@ -73,11 +73,9 @@ const Navbar = () => {
 
     useEffect(() => {
         if (mouseIconClicked) {
-            const header = document.querySelector('header');
-            const mouseIcon = document.getElementById("mouse_icon_id")
+            document.querySelector('header').classList.toggle('sticky');
+            document.getElementById("mouse_icon_id").style.display = "none";
             setScrolled(true);
-            mouseIcon.style.display = "none";
-            header.classList.toggle('sticky');
         }
     }, [ mouseIconClicked ]);
 

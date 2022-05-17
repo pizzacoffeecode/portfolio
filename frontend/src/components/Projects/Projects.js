@@ -39,8 +39,16 @@ const Projects = (props) => {
                   </TagList>
                 </div>
                 <UtilityList>
-                  <ExternalLinks href={ p.visit } target="_blank">Code</ExternalLinks>
-                  <Link to={ p.source }><ExternalLinks>View</ExternalLinks></Link>
+                  <a href={ p.visit } target="_blank"><ExternalLinks >Code</ExternalLinks></a>
+
+                  {
+                    p.newWindow ? (
+                      <a href={ p.source } target="_blank"><ExternalLinks>View</ExternalLinks></a>
+                    ) :
+                      (
+                        <Link to={ p.source }><ExternalLinks>View</ExternalLinks></Link>
+                      )
+                  }
                 </UtilityList>
               </BlogCardFG>
             </BlogCardBG>
