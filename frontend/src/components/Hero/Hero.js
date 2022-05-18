@@ -11,23 +11,27 @@ import './Hero.css';
 const Hero = () => (
     <div className='hero__container' >
         <div className='left_top__section'>
-            <SectionTitle main center>
-                Hello
-            </SectionTitle>
-            <SectionTitle main center>
-                I'm David
-            </SectionTitle>
-            <SectionText>
-                Web, Mobile, and Game Developer.
+            <div className='left_top__content'>
+                <SectionTitle main center >
+                    Hello
+                </SectionTitle>
+                <SectionTitle main center >
+                    I'm David
+                </SectionTitle>
+                <SectionText>
+                    Web, Mobile, and Game Developer.
 
-            </SectionText>
-            <Button onClick={ () => window.location = 'https://google.com' }>Learn More</Button>
+                </SectionText>
+                <Button onClick={ () => window.location = 'https://google.com' }>Learn More</Button>
+            </div>
         </div>
         <div className='right_btm__section'>
-            <BackgroundAnimation />
-            {/* <Pizza /> */ }
+            <div className='right_btm__content'>
+                <BackgroundAnimation />
+                {/* <Pizza /> */ }
+            </div>
         </div>
-    </div>
+    </div >
 );
 
 export default Hero;

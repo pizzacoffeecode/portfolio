@@ -71,7 +71,7 @@ header.sticky .banner__overlay {
 
 header .logo {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
@@ -113,6 +113,7 @@ header.sticky .bush {
 }
 
 header.sticky .logo {
+    top: 50%;
     position: absolute;
     font-size: 1.5em;
     left: 100px;
@@ -200,7 +201,7 @@ nav ul li a:hover {
 }
 
 .mouse_icon__button {
-    width: 150px;
+    width: 100px;
     justify-self: center;
     border: none;
     background: none;
@@ -213,15 +214,9 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.mouse_icon__button:checked {
-    visibility: hidden;
-}
-
-
 .mouse_icon {
     display: flex;
-    width: 150px;
-    height: auto;
+    width: 100px;
     justify-self: center;
 
     -webkit-animation: heartbeat 1.5s steps(3, start) 3s infinite both;
@@ -230,7 +225,7 @@ nav ul li a:hover {
 
 
 
-@media(max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
     header {
         padding: 40px;
 
@@ -292,23 +287,17 @@ nav ul li a:hover {
         visibility: hidden;
     }
 
-    /* 
-    @keyframes gradient-change {
-        0% {
-            left: -200%;
-            top: -200%;
-        }
+    .mouse_icon__container {
+        top: 82.5vh;
+    }
 
-        50% {
-            left: 0%;
-            top: 0%;
-        }
+    .mouse_icon__button {
+        width: 80px;
+    }
 
-        100% {
-            left: -200%;
-            top: -200%;
-        }
-    } */
+    .mouse_icon {
+        width: 80px;
+    }
 
     @keyframes blur-change {
         from {

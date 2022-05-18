@@ -14,9 +14,10 @@ const Navbar = () => {
     const { width } = useContext(viewportContext);
     const { laptop } = mediaQueries;
 
-    const [ isOpen, setOpen ] = useState(false)
-    const [ isSticky, setSticky ] = useState(false)
-    const [ mouseIconClicked, setMouseIconClicked ] = useState(false)
+    const [ isOpen, setOpen ] = useState(false);
+    const [ isSticky, setSticky ] = useState(false);
+    const [ mouseIconClicked, setMouseIconClicked ] = useState(false);
+    const [ linkPressed, setLinkPressed ] = useState(false);
 
     // //? Close Initial Full Page Hero
     useEffect(() => {
@@ -56,33 +57,49 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [ scrolled, handleScroll ])
 
+
+    //? Hamburger clicked or Window resized
     useEffect(() => {
         const navigation = document.querySelector('nav')
+        // Hamburger clicked
         document.querySelector('.toggle').onclick = function () {
             this.classList.toggle('active');
             navigation.classList.toggle('active');
-            // setOpen(!isOpen);
         }
-
+        // Window resized
         if (width > laptop && onmouseup) {
             this.classList.toggle('active');
             navigation.classList.toggle('active');
-            // setOpen(!isOpen);
         }
     }, []);
 
+
+    //? Landing : Mouse Icon clicked
     useEffect(() => {
         if (mouseIconClicked) {
             document.querySelector('header').classList.toggle('sticky');
             document.getElementById("mouse_icon_id").style.display = "none";
             setScrolled(true);
+            setSticky(true);
         }
     }, [ mouseIconClicked ]);
+
+    //? Collapse modal on link press
+    useEffect(() => {
+        const navigation = document.querySelector('nav');
+        document.querySelector('.nav__navlink').onclick = function () {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+
+            setOpen(false);
+        }
+
+
+    }, []);
 
 
     return (
         <header>
-
             <div className='banner'>
                 <div className={ 'mouse_icon__container' } id={ "mouse_icon_id" }>
                     <button className='mouse_icon__button' type="button" onClick={ () => {
@@ -109,14 +126,14 @@ const Navbar = () => {
             </div>
             <nav>
 
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/compscience">Projects</Link></li>
-                    <li><Link to="/frontend">Skills</Link></li>
-                    <li><Link to="/backend">Contact</Link></li>
-                </ul>
-            </nav>
+                <ul className="nav__navlink">
+                    <li><Link className="nav__navlink" to="/" >Home</Link></li>
+                    <li><Link className="nav__navlink" to="/about" >About</Link></li>
+                    <li><Link className="nav__navlink" to="/compscience"  >Projects</Link></li>
+                    <li><Link className="nav__navlink" to="/frontend" >Skills</Link></li>
+                    <li><Link className="nav__navlink" to="/backend" >Contact</Link></li>
+                </ul >
+            </nav >
 
         </header >
 

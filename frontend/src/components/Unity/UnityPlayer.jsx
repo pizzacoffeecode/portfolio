@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Unity, { UnityContext } from "react-unity-webgl";
+import { UNSAFE_NavigationContext as NavigationContext } from 'react-router-dom';
+
 import { SectionText } from '../../components/Section/Section'
 import { BlogCardFG, TitleContent, HeaderThree, Hr, UtilityList, ExternalLinks, GridContainer } from '../Projects/ProjectsStyles';
 import { UnityBlogCardBG } from './UnityPlayerStyles';
@@ -14,7 +16,30 @@ const unityContext = new UnityContext({
 });
 
 export function UnityPlayer() {
+    const [ isLoaded, setIsLoaded ] = useState(false);
 
+    useEffect(function () {
+        unityContext.on("loaded", function () {
+            setIsLoaded(true);
+        });
+    }, []);
+
+    //! BugFix for UnityReact
+    const { navigator } = useContext(NavigationContext);
+
+    useEffect(() => {
+        const unblock = navigator.block(async (tx) => {
+            if (isLoaded) {
+                await unityContext.quitUnityInstance()
+                await setIsLoaded(false)
+                tx.retry()
+            } else {
+                unblock()
+                tx.retry()
+            }
+        });
+        return unblock;
+    }, [ navigator, isLoaded ])
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');

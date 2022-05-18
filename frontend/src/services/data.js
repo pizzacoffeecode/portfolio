@@ -5,7 +5,7 @@
 export const mediaQueries = {
     mobile: 640,
     ipad: 768,
-    laptop: 1024,
+    laptop: 1025,
     desktop: 1280,
 };
 
