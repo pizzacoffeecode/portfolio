@@ -1,8 +1,25 @@
 import styled from 'styled-components'
 
+export const SkillContainer = styled.div`
+display: grid;
+grid-template-columns: 40px 1fr;
+grid-template-rows: auto 1fr;
+height: fit-content;
+align-items: center;
+transition: 2s;
+`
+export const SubSkillContainer = styled.div`
+display: grid;
+grid-template-columns: 40px 1fr;
+grid-template-rows: auto 1fr;
+height: fit-content;
+
+
+`
+
 export const LevelUpBackground = styled.div`
 width: 100%;
-height: 100%;
+height: auto;
 /* background-color: whitesmoke; */
 background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1));
 padding: 2px;

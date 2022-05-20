@@ -2,7 +2,7 @@ import { Section, SectionTextFull, SectionTitle, SectionDivider } from '../Secti
 
 const About = () => {
     return (
-        <Section nopadding>
+        <Section nopadding id='section2'>
             <SectionDivider divider />
             <SectionTitle >
                 About Me

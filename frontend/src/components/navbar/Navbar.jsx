@@ -10,6 +10,12 @@ import HamburgerSpin from '../Hamburger/HamburgerSpin';
 import mouseicon from '../../assets/mouse.png';
 import './Navbar.css';
 
+
+//? GSAP
+import { gsap } from "gsap/dist/gsap";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
+
 const Navbar = () => {
     const { width } = useContext(viewportContext);
     const { laptop } = mediaQueries;
@@ -90,12 +96,28 @@ const Navbar = () => {
         document.querySelector('.nav__navlink').onclick = function () {
             this.classList.toggle('active');
             navigation.classList.toggle('active');
-
             setOpen(false);
         }
-
-
     }, []);
+
+    //GSAP
+    useEffect(() => {
+        document.querySelectorAll("nav ul li div").forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                gsap.to(window, { duration: 1, scrollTo: { y: "#section" + (index + 1), offsetY: 90 } });
+            });
+        });
+    }, [])
+
+
+    // function handleNav(link) {
+    //     console.log(link);
+
+    //     gsap.to(window, {
+    //         duration: 2, scrollTo: { y: link }
+    //     });
+    // }
+
 
 
     return (
@@ -125,13 +147,13 @@ const Navbar = () => {
                 }
             </div>
             <nav>
-
                 <ul className="nav__navlink">
-                    <li><Link className="nav__navlink" to="/" >Home</Link></li>
-                    <li><Link className="nav__navlink" to="/about" >About</Link></li>
-                    <li><Link className="nav__navlink" to="/compscience"  >Projects</Link></li>
-                    <li><Link className="nav__navlink" to="/frontend" >Skills</Link></li>
-                    <li><Link className="nav__navlink" to="/backend" >Contact</Link></li>
+                    <li><div className="nav__navlink" >Home</div></li>
+                    {/* <li><Link className="nav__navlink" to="/" >Home</Link></li> */ }
+                    <li><div className="nav__navlink">About</div></li>
+                    <li><div className="nav__navlink" >Projects</div></li>
+                    <li><div className="nav__navlink"  >Skills</div></li>
+                    <li><div className="nav__navlink" >Contact</div></li>
                 </ul >
             </nav >
 

@@ -16,7 +16,7 @@ const Projects = (props) => {
 
   return (
 
-    < Section nopadding id="projects" >
+    < Section nopadding id="section3" >
       <SectionDivider divider />
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>

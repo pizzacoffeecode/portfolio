@@ -6,6 +6,7 @@ import Theme from './styles/theme';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ViewportProvider from './components/Resize/Resize';
+
 import './index.css';
 
 ReactDOM.render(

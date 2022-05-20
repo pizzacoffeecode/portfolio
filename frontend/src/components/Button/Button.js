@@ -3,7 +3,7 @@ import { ButtonBack, ButtonFront } from '../Section/Section';
 
 const Button = (props) => (
     <ButtonBack alt={ props.alt } form={ props.form } disabled={ props.disabled }>{ props.children }
-        <ButtonFront alt={ props.alt } onClick={ props.onClick } disabled={ props.disabled }>{ props.children }</ButtonFront>
+        <ButtonFront id='learn' alt={ props.alt } onClick={ props.onClick } disabled={ props.disabled }>{ props.children }</ButtonFront>
     </ButtonBack>
 );
 
