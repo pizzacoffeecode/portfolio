@@ -17,7 +17,7 @@ const Projects = (props) => {
   return (
 
     < Section nopadding id="section3" >
-      <SectionDivider divider />
+      <SectionDivider />
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
         { projects.map((p, i) => {
@@ -39,11 +39,11 @@ const Projects = (props) => {
                   </TagList>
                 </div>
                 <UtilityList>
-                  <a href={ p.visit } target="_blank"><ExternalLinks >Code</ExternalLinks></a>
+                  <a href={ p.visit } target="_blank" rel="noreferrer"><ExternalLinks >Code</ExternalLinks></a>
 
                   {
                     p.newWindow ? (
-                      <a href={ p.source } target="_blank"><ExternalLinks>View</ExternalLinks></a>
+                      <a href={ p.source } target="_blank" rel="noreferrer"><ExternalLinks>View</ExternalLinks></a>
                     ) :
                       (
                         <Link to={ p.source }><ExternalLinks>View</ExternalLinks></Link>

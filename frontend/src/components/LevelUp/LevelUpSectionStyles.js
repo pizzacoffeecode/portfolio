@@ -50,6 +50,10 @@ font-size: 18px;
 
 padding: 0 0 0 1rem;
 z-index: 5;
+
+@media ${ props => props.theme.breakpoints.sm } {
+		font-size: 14px;
+	}
 `
 
 

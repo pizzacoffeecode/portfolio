@@ -67,7 +67,7 @@ const LevelUpSection = () => {
                     openAccordion[ idx ] &&
 
                     skill.subskills.map((subSkill, idx) => {
-                        return <div key={ idx } style={ { marginLeft: "10%" } }>{
+                        return <div key={ idx } style={ { marginLeft: "4rem" } }>{
 
                             <LevelUpBackground style={ { width: "100%", justifySelf: "end" } }>
                                 <LevelUpContainer>

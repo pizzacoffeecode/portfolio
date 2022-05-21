@@ -165,11 +165,13 @@ nav ul {
     transform: translateX(100px);
     opacity: 0;
     visibility: hidden;
+    align-items: center;
 }
 
 
 nav ul li {
     list-style: none;
+
 }
 
 
@@ -181,6 +183,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: #ff275f;
+}
+
 nav ul li div {
     color: #fff;
     display: inline-block;
@@ -189,9 +195,10 @@ nav ul li div {
     text-decoration: none;
 }
 
-nav ul li a:hover {
+nav ul li div:hover {
     color: #ff275f;
 }
+
 
 
 .mouse_icon__container {

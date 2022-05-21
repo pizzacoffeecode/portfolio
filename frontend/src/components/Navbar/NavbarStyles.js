@@ -1,23 +1,41 @@
-// import styled from "styled-components"
+import styled from "styled-components"
 
-// export const Boxes = styled.div`
-//   width: 100%;
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   gap: 24px;
-//   margin: 24px 0 40px;
+// Social Icons 
+// export const SocialIconsContainer = styled.div`
+// max-width: 1040px;
+// display: flex;
+// justify-content: space-between;
 
-//   @media ${props => props.theme.breakpoints.md}{
-//     gap: 16px;
-//     margin: 20px 0 32px;
-//     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-//   }
+// @media ${ props => props.theme.breakpoints.md }{
+//   display: flex;
+//   justify-content: space-between;
+// }
 
-//   @media ${props => props.theme.breakpoints.sm}{
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     gap: 10px;
-//     max-width: 500px;
-//     margin: 24px auto;
-//   }
+// @media ${ props => props.theme.breakpoints.sm }{
+//   display: flex;
+// 	width: 100%;
+//   flex-direction: column;
+// }
 // `
+export const SocialContainer = styled.div`
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+
+	@media ${ props => props.theme.breakpoints.md }{
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+`
+export const SocialIcons = styled.a`
+transition: 0.3s ease;
+color: white;
+border-radius: 50px;
+  padding: 0px 8px 0px 8px;
+&:hover {
+    background-color: #212d45;
+    transform: scale(1.2);
+    cursor: pointer;
+    
+  }
+`;

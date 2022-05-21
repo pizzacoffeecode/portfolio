@@ -1,14 +1,18 @@
 import React, { useEffect, useContext, useState, useCallback } from 'react';
 import { Link } from "react-router-dom";
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { FaDiscord } from 'react-icons/fa';
+
 
 import { viewportContext } from '../Resize/Resize'
 import { mediaQueries } from '../../services/data';
-import BackgroundAnimation from '../svg/BackgroundAnimation/BackgroundAnimation';
 
 import HamburgerSpin from '../Hamburger/HamburgerSpin';
 
 import mouseicon from '../../assets/mouse.png';
+
 import './Navbar.css';
+import { SocialContainer, SocialIcons } from './NavbarStyles';
 
 
 //? GSAP
@@ -23,7 +27,6 @@ const Navbar = () => {
     const [ isOpen, setOpen ] = useState(false);
     const [ isSticky, setSticky ] = useState(false);
     const [ mouseIconClicked, setMouseIconClicked ] = useState(false);
-    const [ linkPressed, setLinkPressed ] = useState(false);
 
     // //? Close Initial Full Page Hero
     useEffect(() => {
@@ -77,7 +80,7 @@ const Navbar = () => {
             this.classList.toggle('active');
             navigation.classList.toggle('active');
         }
-    }, []);
+    }, [ width, laptop ]);
 
 
     //? Landing : Mouse Icon clicked
@@ -104,21 +107,10 @@ const Navbar = () => {
     useEffect(() => {
         document.querySelectorAll("nav ul li div").forEach((btn, index) => {
             btn.addEventListener("click", () => {
-                gsap.to(window, { duration: 1, scrollTo: { y: "#section" + (index + 1), offsetY: 90 } });
+                gsap.to(window, { duration: 1, scrollTo: { y: "#section" + (index + 2), offsetY: 90 } });
             });
         });
     }, [])
-
-
-    // function handleNav(link) {
-    //     console.log(link);
-
-    //     gsap.to(window, {
-    //         duration: 2, scrollTo: { y: link }
-    //     });
-    // }
-
-
 
     return (
         <header>
@@ -132,8 +124,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="banner__overlay" />
-            <Link to="#" className="logo">
-
+            <Link to="/" className="logo" onClick={ () => window.scrollTo(0, 0) }>
                 <span className='title__bg'>
                     <span style={ { color: 'gray' } }>david</span>
                     <span className="bush">bushen.</span>
@@ -148,12 +139,23 @@ const Navbar = () => {
             </div>
             <nav>
                 <ul className="nav__navlink">
-                    <li><div className="nav__navlink" >Home</div></li>
-                    {/* <li><Link className="nav__navlink" to="/" >Home</Link></li> */ }
+                    {/* <li><div className="nav__navlink" >Home</div></li> */ }
+                    <li><Link className="nav__navlink" to="/" onClick={ () => window.scrollTo(0, 0) }>Home</Link></li>
                     <li><div className="nav__navlink">About</div></li>
                     <li><div className="nav__navlink" >Projects</div></li>
                     <li><div className="nav__navlink"  >Skills</div></li>
                     <li><div className="nav__navlink" >Contact</div></li>
+                    <SocialContainer>
+                        <SocialIcons href="https://github.com/Fireal1983">
+                            <AiFillGithub size="2rem" />
+                        </SocialIcons>
+                        <SocialIcons href="https://google.com">
+                            <AiFillLinkedin size="2rem" />
+                        </SocialIcons>
+                        <SocialIcons href="https://google.com">
+                            <FaDiscord size="2rem" />
+                        </SocialIcons>
+                    </SocialContainer>
                 </ul >
             </nav >
 

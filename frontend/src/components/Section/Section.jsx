@@ -141,7 +141,7 @@ background-color: #fff;
 background: ${ (props) => props.colorAlt ?
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
     'linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1))' };
-  margin-bottom: ${ (props) => props.divider ? "8rem" : "" };
+  margin-bottom: ${ (props) => props.divider ? "8rem" : "2rem" };
 
 @media ${ (props) => props.theme.breakpoints.md } {
   width: 48px;
