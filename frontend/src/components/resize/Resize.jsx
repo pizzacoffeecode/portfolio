@@ -31,10 +31,6 @@ const ViewportProvider = ({ children }) => {
     );
 };
 
-// const MobileComponent = () => <p>"Hmmm... Why is your screen so small?"</p>;
-// const DesktopComponent = () => <p>"Wow, your screen is big!"</p>;
-
-
 export default ViewportProvider;
 
 
@@ -47,33 +43,3 @@ const useViewport = () => {
     const { width, height } = useContext(viewportContext);
     return { width, height };
 }
-// //  https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/
-
-
-
-
-
-
-
-// // const setInitWidth = useEffect(() => {
-// //     return window.innerWidth;
-// // }, []); // run once
-
-
-// // const viewportContext = React.createContext({});
-
-// // const Resize = () => {
-
-// //     const [ width, setWidth ] = useState(setInitWidth);
-// //     const mobile = 640;
-
-// //     useEffect(() => {
-// //         const handleWindowResize = () => setWidth(window.innerWidth)
-// //         window.addEventListener("resize", handleWindowResize);
-
-// //         // Return a function from the effect that removes the event listener
-// //         return () => window.removeEventListener("resize", handleWindowResize);
-// //     }, []);
-
-// //     return width < mobile ? true : false;
-// // }

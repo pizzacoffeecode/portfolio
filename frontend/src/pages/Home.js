@@ -13,9 +13,9 @@ const Home = () => {
         <HomeWrapper>
             <Hero />
             <About />
+            <LevelUpSection />
             <Coffee />
             <Projects />
-            <LevelUpSection />
         </HomeWrapper>
     )
 }

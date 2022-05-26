@@ -7,7 +7,7 @@ padding: 3rem;
 place-items: center;
 /* column-gap: 2rem; */
 row-gap: 3rem;
-min-height: 100%;
+min-height: 800px;
 
 @media ${ (props) => props.theme.breakpoints.sm } {
   display: flex;
@@ -27,7 +27,6 @@ position: relative;
   /* box-shadow: 3px 3px 20px #00ccff; */
   text-align: center;
 
-
   width: 100%;
   max-width: 900px;
 
@@ -35,8 +34,6 @@ position: relative;
   height: auto;
 
   background-color: rgba(0, 0, 0, 1);
-
-  /* overflow: hidden; */
 
   &::before {
     content: '';

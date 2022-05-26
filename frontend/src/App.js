@@ -1,4 +1,4 @@
-import LogRocket from 'logrocket';
+// import LogRocket from 'logrocket';
 
 import { Routes, Route } from "react-router-dom";
 
@@ -16,14 +16,14 @@ import Astar from './pages/algorithms/Astar';
 import './App.css';
 
 
-LogRocket.init('az3p9v/portfolio');
-LogRocket.identify(process.env.REACT_APP_USERID, {
-  name: 'frontend',
-  email: 'frontend@outlook.com',
+// LogRocket.init('az3p9v/portfolio');
+// LogRocket.identify(process.env.REACT_APP_USERID, {
+//   name: 'frontend',
+//   email: 'frontend@outlook.com',
 
-  // Add your own custom user variables here, ie:
-  subscriptionType: 'free'
-});
+//   // Add your own custom user variables here, ie:
+//   subscriptionType: 'free'
+// });
 
 
 function App() {

@@ -200,7 +200,6 @@ nav ul li div:hover {
 }
 
 
-
 .mouse_icon__container {
     display: grid;
 
@@ -235,6 +234,7 @@ nav ul li div:hover {
     -webkit-animation: heartbeat 1.5s steps(3, start) 3s infinite both;
     animation: heartbeat 1.5s steps(3, start) 3s infinite both;
 }
+
 
 
 
@@ -299,6 +299,11 @@ nav ul li div:hover {
         opacity: 0;
         visibility: hidden;
     }
+
+
+
+
+
 
     .mouse_icon__container {
         top: 82.5vh;

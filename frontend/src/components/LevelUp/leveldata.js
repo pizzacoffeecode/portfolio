@@ -1,4 +1,23 @@
-export const leveldata = [
+
+export const languageSkills = [
+    {
+        skill: "C#",
+        level: 7,
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(1, 0, 255, 1)",
+        subskills: []
+    },
+    {
+        skill: "TypeScript",
+        level: 3,
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(1, 0, 255, 1)",
+        subskills: []
+    },
+]
+
+
+export const webSkills = [
     {
         skill: "MongoDb",
         level: 5,
@@ -75,31 +94,20 @@ export const leveldata = [
         subskills: []
     },
     {
-        skill: "TypeScript",
-        level: 3,
-        color1: "rgba(0, 194, 255, 1)",
-        color2: "rgba(250, 0, 255, 1)",
-        subskills: []
-    },
-    {
-        skill: "C#",
-        level: 7,
-        color1: "rgba(0, 194, 255, 1)",
-        color2: "rgba(250, 0, 255, 1)",
-        subskills: []
-    },
-    {
-        skill: "Unity Engine",
-        level: 7,
-        color1: "rgba(0, 194, 255, 1)",
-        color2: "rgba(250, 0, 255, 1)",
-        subskills: []
-    },
-    {
         skill: "Blazor / XAML",
         level: 4,
         color1: "rgba(0, 194, 255, 1)",
         color2: "rgba(250, 0, 255, 1)",
         subskills: []
     }
+]
+
+export const gameSkills = [
+    {
+        skill: "Unity Engine",
+        level: 7,
+        color1: "rgba(0, 194, 255, 1)",
+        color2: "rgba(100, 0, 10, 1)",
+        subskills: []
+    },
 ]

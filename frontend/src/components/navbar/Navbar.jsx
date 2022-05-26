@@ -127,9 +127,9 @@ const Navbar = () => {
             <Link to="/" className="logo" onClick={ () => window.scrollTo(0, 0) }>
                 <span className='title__bg'>
                     <span style={ { color: 'gray' } }>david</span>
-                    <span className="bush">bushen.</span>
+                    <span className="bush">Roberts.</span>
                 </span>
-                <span className="bushen__bg">bushen.</span>
+                <span className="bushen__bg">Roberts.</span>
             </Link>
             <div className="toggle">
                 {
@@ -145,18 +145,20 @@ const Navbar = () => {
                     <li><div className="nav__navlink" >Projects</div></li>
                     <li><div className="nav__navlink"  >Skills</div></li>
                     <li><div className="nav__navlink" >Contact</div></li>
-                    <SocialContainer>
-                        <SocialIcons href="https://github.com/Fireal1983">
-                            <AiFillGithub size="2rem" />
-                        </SocialIcons>
-                        <SocialIcons href="https://google.com">
-                            <AiFillLinkedin size="2rem" />
-                        </SocialIcons>
-                        <SocialIcons href="https://google.com">
-                            <FaDiscord size="2rem" />
-                        </SocialIcons>
-                    </SocialContainer>
-                </ul >
+                    <div className="nav__social">
+                        <SocialContainer>
+                            <SocialIcons href="https://github.com/Fireal1983">
+                                <AiFillGithub size="2rem" />
+                            </SocialIcons>
+                            <SocialIcons href="https://google.com">
+                                <AiFillLinkedin size="2rem" />
+                            </SocialIcons>
+                            <SocialIcons href="https://discord.gg/VNA7z9Fd3b">
+                                <FaDiscord size="2rem" />
+                            </SocialIcons>
+                        </SocialContainer>
+                    </div >
+                </ul>
             </nav >
 
         </header >

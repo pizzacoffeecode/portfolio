@@ -33,7 +33,7 @@ const Hero = () => {
                         I'm David
                     </SectionTitle>
                     <SectionText>
-                        Web, Mobile, and Game Developer.
+                        Aspiring Web, Mobile, and Game Developer.
                     </SectionText>
                     <Button>Learn More</Button>
                 </div>

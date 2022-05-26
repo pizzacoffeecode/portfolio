@@ -8,17 +8,20 @@ const About = () => {
                 About Me
             </SectionTitle>
             <SectionTextFull>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero id officia optio quo laboriosam amet hic sunt nobis accusantium nemo deserunt voluptatibus consequatur provident a tempora non debitis, dicta reprehenderit.
+                I'm self taught, extremely motivated aspiring developer, who gave up my lucrative former profession to pursue my true love. Code.
+                <br />
+                ...oh, and I really like pizza, coffee, and coding into the early hours of the morning.
             </SectionTextFull>
-
             <SectionTextFull>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero id officia optio quo laboriosam amet hic sunt nobis accusantium nemo deserunt voluptatibus consequatur provident a tempora non debitis, dicta reprehenderit.
+                My primary languages are C# and javascript in addition to various frameworks for mobile, web, and game development.
+                I'm at the stage now where I understand the full architecture of an application and can research the required stack to deliver the frontend,
+                backend, and database.
             </SectionTextFull>
-
             <SectionTextFull>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero id officia optio quo laboriosam amet hic sunt nobis accusantium nemo deserunt voluptatibus consequatur provident a tempora non debitis, dicta reprehenderit.
+                I'm currently freelancing, but would really like to collaborate in a professional environment as a junior developer.
+                If you think I might make a good fit for your next project or would like to learn more about me please feel free to <a href="https://google.com">reach out</a> or check out my <a href="https://google.com">projects</a> section below...
             </SectionTextFull>
-        </Section>
+        </Section >
     )
 }
 

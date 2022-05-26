@@ -9,12 +9,12 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:314-343-3432">111-111-1111</LinkItem>
+          <LinkItem href="tel:314-343-3432" style={ { textDecoration: "none" } }>+1 267 - 428 - 9187</LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:contact@jsmastery.com">
-            airinteractivestudios@gmail.com
+          <LinkItem href="mailto:davidroberts.developer@gmail.com">
+            davidroberts.developer@gmail.com
           </LinkItem>
         </LinkColumn>
       </LinkList>
@@ -30,7 +30,7 @@ const Footer = () => {
           <SocialIcons href="https://google.com">
             <AiFillLinkedin size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://google.com">
+          <SocialIcons href="https://discord.gg/VNA7z9Fd3b">
             <FaDiscord size="3rem" />
           </SocialIcons>
         </SocialContainer>

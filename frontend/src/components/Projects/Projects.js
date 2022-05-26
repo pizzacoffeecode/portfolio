@@ -43,10 +43,10 @@ const Projects = (props) => {
 
                   {
                     p.newWindow ? (
-                      <a href={ p.source } target="_blank" rel="noreferrer"><ExternalLinks>View</ExternalLinks></a>
+                      <a href={ p.source } target="_blank" rel="noreferrer" ><ExternalLinks>View</ExternalLinks></a>
                     ) :
                       (
-                        <Link to={ p.source }><ExternalLinks>View</ExternalLinks></Link>
+                        <Link to={ p.source } onClick={ () => window.scrollTo(0, 0) }><ExternalLinks>View</ExternalLinks></Link>
                       )
                   }
                 </UtilityList>

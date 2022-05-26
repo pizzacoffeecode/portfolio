@@ -1,6 +1,3 @@
-// import abacademy from '../assets/portfolio/abacademy.jpg'
-
-
 //? Media Queries
 export const mediaQueries = {
     mobile: 640,
@@ -13,7 +10,7 @@ export const projects = [
     {
         title: 'AB Academy',
         description: "A website for a local soccer coach, including a scheduling api and contact form. The clients website required many videos, so reducing load times down was critical. Good NextJs practices along with a serious amount of video and image optimization got the website a 100% perfomance score on lighthouse.",
-        image: 'ab.webp',
+        image: 'ab2.webp',
         tags: [ 'React', 'Node.js', 'NextJS' ],
         source: 'https://ab-academy.vercel.app',
         visit: 'https://github.com/Fireal1983/ab-academy',
@@ -21,8 +18,8 @@ export const projects = [
         id: 0,
     },
     {
-        title: 'Graph CMS Blog',
-        description: "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+        title: 'Sports Betting Blog',
+        description: "A sports betting blog utilizing Graph CMS as a user accessible backend. Both the front and backend were built in NextJs",
         image: 'blog.webp',
         tags: [ 'Next Js', 'Graph CMS', 'GraphQL' ],
         source: 'https://graphcms-blog-blush.vercel.app',
@@ -46,6 +43,16 @@ export const projects = [
         image: 'astar.webp',
         tags: [ 'Unity', '', 'C#' ],
         source: '/astar',
+        visit: 'https://github.com',
+        newWindow: false,
+        id: 3,
+    },
+    {
+        title: 'Observer Pattern in C# with Unity GUI',
+        description: "A pure C# implementation of the Observer Pattern with a Unity overlay to demonstrate the functionality",
+        image: 'astar.webp',
+        tags: [ 'Unity', '', 'C#' ],
+        source: '/observer',
         visit: 'https://github.com',
         newWindow: false,
         id: 3,

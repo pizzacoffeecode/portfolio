@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Section, SectionDivider, SectionTitle } from './../Section/Section';
-import { leveldata } from './leveldata';
+import { webSkills, languageSkills, gameSkills } from './leveldata';
 import { LevelUpContainer, LevelUpBackground, Text, ClipPath, SkillContainer } from './LevelUpSectionStyles';
 import PlusMinusIcon from './PlusMinusIcon/PlusMinusIcon';
 
@@ -42,55 +42,65 @@ const LevelUpSection = () => {
 
 
 
-    const levels = leveldata.map((skill, idx) => {
+    function DisplaySkills(skillType) {
 
-        return (
-            <div key={ idx }>
-                <SkillContainer key={ idx } >
+        const skillsMapped = skillType.map((skill, idx) => {
+
+            return (
+                <div key={ idx }>
+                    <SkillContainer key={ idx } >
+                        {
+                            skill.subskills.length > 0 ? (
+                                <PlusMinusIcon key={ idx } id={ idx } handleExpand={ handleExpand } />
+                            ) : (
+                                <div />
+                            )
+                        }
+                        <LevelUpBackground>
+                            <LevelUpContainer>
+                                <Text>{ skill.skill } - { skill.level }</Text>
+                                <ClipPath skill={ skill.skill } level={ skill.level } color1={ skill.color1 } color2={ skill.color2 } />
+                            </LevelUpContainer>
+                        </LevelUpBackground>
+                    </SkillContainer>
+
+
                     {
-                        skill.subskills.length > 0 ? (
-                            <PlusMinusIcon key={ idx } id={ idx } handleExpand={ handleExpand } />
-                        ) : (
-                            <div />
-                        )
+                        openAccordion[ idx ] &&
+
+                        skill.subskills.map((subSkill, idx) => {
+                            return <div key={ idx } style={ { marginLeft: "4rem" } }>{
+
+                                <LevelUpBackground style={ { width: "100%", justifySelf: "end" } }>
+                                    <LevelUpContainer>
+                                        <Text>{ subSkill.skill } - { subSkill.level }</Text>
+                                        <ClipPath subSkill={ subSkill.skill } level={ subSkill.level } color1={ subSkill.color1 } color2={ subSkill.color2 } />
+                                    </LevelUpContainer>
+                                </LevelUpBackground>
+                            }</div>;
+                        })
                     }
-                    <LevelUpBackground>
-                        <LevelUpContainer>
-                            <Text>{ skill.skill } - { skill.level }</Text>
-                            <ClipPath skill={ skill.skill } level={ skill.level } color1={ skill.color1 } color2={ skill.color2 } />
-                        </LevelUpContainer>
-                    </LevelUpBackground>
-                </SkillContainer>
 
+                </div>
+            );
+        });
+        return skillsMapped;
+    }
 
-                {
-                    openAccordion[ idx ] &&
-
-                    skill.subskills.map((subSkill, idx) => {
-                        return <div key={ idx } style={ { marginLeft: "4rem" } }>{
-
-                            <LevelUpBackground style={ { width: "100%", justifySelf: "end" } }>
-                                <LevelUpContainer>
-                                    <Text>{ subSkill.skill } - { subSkill.level }</Text>
-                                    <ClipPath subSkill={ subSkill.skill } level={ subSkill.level } color1={ subSkill.color1 } color2={ subSkill.color2 } />
-                                </LevelUpContainer>
-                            </LevelUpBackground>
-                        }</div>;
-                    })
-                }
-
-            </div>
-
-
-        );
-    });
 
     return (
         <Section id="section4">
             <SectionDivider />
             <SectionTitle main>Skills</SectionTitle>
             <div style={ { width: "88%", alignSelf: "center" } }>
-                { levels }
+                <div>Languages</div>
+                { DisplaySkills(languageSkills) }
+                <div>Web & App Development</div>
+                { DisplaySkills(webSkills) }
+                <div>Game Development</div>
+                { DisplaySkills(gameSkills) }
+                <div>Computer Science</div>
+                { DisplaySkills(webSkills) }
             </div>
         </Section >
     )
