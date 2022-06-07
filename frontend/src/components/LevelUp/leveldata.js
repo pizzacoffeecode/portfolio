@@ -27,19 +27,19 @@ export const Skills = [
                 color2: "rgba(31, 255, 0, 1)",
                 subskills: []
             },
+            {
+                expanded: false,
+                skill: "MySQL / MongoDB",
+                level: 3,
+                color1: "rgba(255, 235, 59, 1)",
+                color2: "rgba(31, 255, 0, 1)",
+                subskills: []
+            },
         ],
     },
     {
         title: "Web & App Development",
         subjects: [
-            {
-                expanded: false,
-                skill: "MongoDb",
-                level: 5,
-                color1: "rgba(0, 194, 255, 1)",
-                color2: "rgba(250, 0, 255, 1)",
-                subskills: []
-            },
             {
                 expanded: false,
                 skill: "Express JS",

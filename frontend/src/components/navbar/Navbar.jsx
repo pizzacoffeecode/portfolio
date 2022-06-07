@@ -126,7 +126,7 @@ const Navbar = () => {
             <div className="banner__overlay" />
             <Link to="/" className="logo" onClick={ () => window.scrollTo(0, 0) }>
                 <span className='title__bg'>
-                    <span style={ { color: 'gray' } }>DAVID</span>
+                    <span style={ { color: 'gray' } }>David</span>
                     <span className="bush">Roberts.</span>
                 </span>
                 <span className="bushen__bg">ROBERTS.</span>
