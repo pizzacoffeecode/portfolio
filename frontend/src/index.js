@@ -10,19 +10,22 @@ import ViewportProvider from './components/Resize/Resize';
 import './index.css';
 
 ReactDOM.render(
-  <ViewportProvider>
-    <React.StrictMode>
-      <BrowserRouter>
-        <Theme>
-          <div className='bg_anim'>
-            <div className="bg_gradient">
+
+  <React.StrictMode>
+    <BrowserRouter>
+      <Theme>
+
+        <div className='bg_anim'>
+          <div className="bg_gradient">
+            <ViewportProvider>
               <App />
-            </div>
+            </ViewportProvider>
           </div>
-        </Theme>
-      </BrowserRouter>
-    </React.StrictMode>
-  </ViewportProvider>,
+        </div>
+      </Theme>
+    </BrowserRouter>
+  </React.StrictMode>
+  ,
   document.getElementById('root')
 );
 

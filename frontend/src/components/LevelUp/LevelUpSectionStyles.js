@@ -43,7 +43,7 @@ border-radius: 10px;
 
 export const Text = styled.p`
 font-family: var(--font-button);
-color: white;
+color: black;
 position: absolute;
 
 font-size: 18px;

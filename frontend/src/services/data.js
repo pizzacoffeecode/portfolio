@@ -50,7 +50,7 @@ export const projects = [
     {
         title: 'Observer Pattern in C# with Unity GUI',
         description: "A pure C# implementation of the Observer Pattern with a Unity overlay to demonstrate the functionality",
-        image: 'astar.webp',
+        image: 'observer.png',
         tags: [ 'Unity', '', 'C#' ],
         source: '/observer',
         visit: 'https://github.com',

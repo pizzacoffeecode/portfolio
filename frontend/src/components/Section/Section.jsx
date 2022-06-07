@@ -107,7 +107,7 @@ max-width: 100%;
 font-size: 24px;
 line-height: 40px;
 font-weight: 300;
-padding: 1rem 3.9rem 3rem 3.5rem;
+padding: 1rem 3.9rem 1rem 3.5rem;
 place-items: center;
 color: #FFFFFF;
 

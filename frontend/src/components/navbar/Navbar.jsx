@@ -78,7 +78,7 @@ const Navbar = () => {
         // Window resized
         if (width > laptop && onmouseup) {
             this.classList.toggle('active');
-            navigation.classList.toggle('active');
+            // navigation.classList.toggle('active');
         }
     }, [ width, laptop ]);
 
@@ -107,7 +107,7 @@ const Navbar = () => {
     useEffect(() => {
         document.querySelectorAll("nav ul li div").forEach((btn, index) => {
             btn.addEventListener("click", () => {
-                gsap.to(window, { duration: 1, scrollTo: { y: "#section" + (index + 2), offsetY: 90 } });
+                gsap.to(window, { duration: 1, scrollTo: { y: "#section" + (index + 1), offsetY: 90 } });
             });
         });
     }, [])
@@ -126,10 +126,10 @@ const Navbar = () => {
             <div className="banner__overlay" />
             <Link to="/" className="logo" onClick={ () => window.scrollTo(0, 0) }>
                 <span className='title__bg'>
-                    <span style={ { color: 'gray' } }>david</span>
+                    <span style={ { color: 'gray' } }>DAVID</span>
                     <span className="bush">Roberts.</span>
                 </span>
-                <span className="bushen__bg">Roberts.</span>
+                <span className="bushen__bg">ROBERTS.</span>
             </Link>
             <div className="toggle">
                 {
@@ -137,28 +137,30 @@ const Navbar = () => {
                     <HamburgerSpin toggled={ isOpen } toggle={ setOpen } />
                 }
             </div>
-            <nav>
+            <nav className="nav">
                 <ul className="nav__navlink">
                     {/* <li><div className="nav__navlink" >Home</div></li> */ }
                     <li><Link className="nav__navlink" to="/" onClick={ () => window.scrollTo(0, 0) }>Home</Link></li>
                     <li><div className="nav__navlink">About</div></li>
-                    <li><div className="nav__navlink" >Projects</div></li>
                     <li><div className="nav__navlink"  >Skills</div></li>
+                    <li><div className="nav__navlink" >Projects</div></li>
+
                     <li><div className="nav__navlink" >Contact</div></li>
-                    <div className="nav__social">
-                        <SocialContainer>
-                            <SocialIcons href="https://github.com/Fireal1983">
-                                <AiFillGithub size="2rem" />
-                            </SocialIcons>
-                            <SocialIcons href="https://google.com">
-                                <AiFillLinkedin size="2rem" />
-                            </SocialIcons>
-                            <SocialIcons href="https://discord.gg/VNA7z9Fd3b">
-                                <FaDiscord size="2rem" />
-                            </SocialIcons>
-                        </SocialContainer>
-                    </div >
+
                 </ul>
+                <div className="nav__social">
+                    <SocialContainer>
+                        <SocialIcons href="https://github.com/Fireal1983">
+                            <AiFillGithub size="2rem" />
+                        </SocialIcons>
+                        <SocialIcons href="https://www.linkedin.com/in/david-roberts-720a95240">
+                            <AiFillLinkedin size="2rem" />
+                        </SocialIcons>
+                        <SocialIcons href="https://discord.gg/VNA7z9Fd3b">
+                            <FaDiscord size="2rem" />
+                        </SocialIcons>
+                    </SocialContainer>
+                </div >
             </nav >
 
         </header >

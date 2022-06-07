@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 
 import { SectionText, SectionTitle } from '../Section/Section';
 import Button from '../Button/Button';
@@ -13,13 +13,17 @@ gsap.registerPlugin(ScrollToPlugin);
 
 
 const Hero = () => {
-
+    const [ loaded, setLoaded ] = useState(false);
     //GSAP
     useEffect(() => {
         const learnLink = document.getElementById('learn');
         learnLink.addEventListener("click", () => {
-            gsap.to(window, { duration: 1, scrollTo: { y: "#section2", offsetY: 90 } });
+            gsap.to(window, { duration: 1, scrollTo: { y: "#section1", offsetY: 90 } });
         });
+    }, [])
+
+    useLayoutEffect(() => {
+        setLoaded(true);
     }, [])
 
     return (
@@ -27,21 +31,22 @@ const Hero = () => {
             <div className='left_top__section'>
                 <div className='left_top__content'>
                     <SectionTitle main center >
-                        Hello
+                        { "Hello" }
                     </SectionTitle>
                     <SectionTitle main center >
-                        I'm David
+                        { "I'm David" }
                     </SectionTitle>
                     <SectionText>
-                        Aspiring Web, Mobile, and Game Developer.
+                        { "Aspiring Web, and Application Developer" }
                     </SectionText>
-                    <Button>Learn More</Button>
+                    <Button>{ "Learn More" }</Button>
                 </div>
             </div>
             <div className='right_btm__section'>
                 <div className='right_btm__content'>
-                    <BackgroundAnimation />
-                    {/* <Pizza /> */ }
+                    {
+                        loaded && < BackgroundAnimation />
+                    }
                 </div>
             </div>
         </div >

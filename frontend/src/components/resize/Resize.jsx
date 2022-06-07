@@ -1,4 +1,4 @@
-import { React, useState, useEffect, createContext, useContext } from "react";
+import { React, useState, useEffect, createContext } from "react";
 export const viewportContext = createContext({});
 
 const ViewportProvider = ({ children }) => {
@@ -36,10 +36,10 @@ export default ViewportProvider;
 
 /* Rewrite the "useViewport" hook to pull the width and height values
    out of the context instead of calculating them itself */
-const useViewport = () => {
-    /* We can use the "useContext" Hook to acccess a context from within
-       another Hook, remember, Hooks are composable! */
+// const useViewport = () => {
+/* We can use the "useContext" Hook to acccess a context from within
+   another Hook, remember, Hooks are composable! */
 
-    const { width, height } = useContext(viewportContext);
-    return { width, height };
-}
+//     const { width, height } = useContext(viewportContext);
+//     return { width, height };
+// }

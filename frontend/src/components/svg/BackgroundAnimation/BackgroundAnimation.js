@@ -1,9 +1,8 @@
-import { useContext, useEffect } from "react";
-import { viewportContext } from '../../Resize/Resize';
-import pizzaPng from "../../../assets/pizza.png";
+// import { useContext } from "react";
+// import { viewportContext } from '../../Resize/Resize';
 function BackgroundAnimation() {
 
-  const { width } = useContext(viewportContext);
+  // const { width } = useContext(viewportContext);
 
 
   // useEffect(() => {

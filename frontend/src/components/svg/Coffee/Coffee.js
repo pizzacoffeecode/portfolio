@@ -1,9 +1,8 @@
-import { useContext, useEffect } from "react";
-import { viewportContext } from '../../Resize/Resize';
+// import { useContext } from "react";
+// import { viewportContext } from '../../Resize/Resize';
 function Coffee() {
 
-    const { width } = useContext(viewportContext);
-
+    // const { width } = useContext(viewportContext);
 
     // useEffect(() => {
     //     const coffeeSVG = document.getElementById('coffeeSvg');

@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Section, SectionDivider, SectionTitle } from './../Section/Section';
-import { webSkills, languageSkills, gameSkills } from './leveldata';
+import { HeaderThree } from "../Projects/ProjectsStyles";
+import { Skills } from './leveldata';
 import { LevelUpContainer, LevelUpBackground, Text, ClipPath, SkillContainer } from './LevelUpSectionStyles';
 import PlusMinusIcon from './PlusMinusIcon/PlusMinusIcon';
 
 
+
 const LevelUpSection = () => {
-    const [ openAccordion, setOpenAccordion ] = useState([ false ]);
+    const skillsArr = [ ...Skills ];
+    const [ openAccordion, setOpenAccordion ] = useState(skillsArr);
 
     // useEffect(() => {
     //     var acc = document.getElementsByClassName("accordion");
@@ -30,77 +33,70 @@ const LevelUpSection = () => {
 
 
 
-    function handleExpand(event, id) {
-        //console.log("event = " + event + "key" + key);
+    function handleExpand(skillId, subjectId, openState) {
+        // console.log("event = " + event + " skillId = " + skillId + " subjectId = " + subjectId);
         const tempArray = [ ...openAccordion ];
-        tempArray[ id ] = event;
+        tempArray[ skillId ].subjects[ subjectId ].expanded = openState;
         setOpenAccordion(tempArray);
 
-        //console.log("accordian" + openAccordion);
+        console.log("accordian" + openAccordion);
     }
 
 
 
+    const skillsMapped = Skills.map((subject, idx) => {
+        return (
+            <div key={ idx + subject } style={ { paddingBottom: "2rem" } }>
+                <HeaderThree>{ subject.title }</HeaderThree>
+                {
+                    subject.subjects.map((skill, idx2) => {
+                        return <div key={ (idx2) }>
+                            <SkillContainer >
+                                {
 
-    function DisplaySkills(skillType) {
-
-        const skillsMapped = skillType.map((skill, idx) => {
-
-            return (
-                <div key={ idx }>
-                    <SkillContainer key={ idx } >
-                        {
-                            skill.subskills.length > 0 ? (
-                                <PlusMinusIcon key={ idx } id={ idx } handleExpand={ handleExpand } />
-                            ) : (
-                                <div />
-                            )
-                        }
-                        <LevelUpBackground>
-                            <LevelUpContainer>
-                                <Text>{ skill.skill } - { skill.level }</Text>
-                                <ClipPath skill={ skill.skill } level={ skill.level } color1={ skill.color1 } color2={ skill.color2 } />
-                            </LevelUpContainer>
-                        </LevelUpBackground>
-                    </SkillContainer>
-
-
-                    {
-                        openAccordion[ idx ] &&
-
-                        skill.subskills.map((subSkill, idx) => {
-                            return <div key={ idx } style={ { marginLeft: "4rem" } }>{
-
-                                <LevelUpBackground style={ { width: "100%", justifySelf: "end" } }>
+                                    skill.subskills.length > 0 ? (
+                                        <PlusMinusIcon key={ idx2 } skillId={ idx } subjectId={ idx2 } openState={ skill.expanded } handleExpand={ handleExpand } />
+                                    ) : (
+                                        <div />
+                                    )
+                                }
+                                <LevelUpBackground>
                                     <LevelUpContainer>
-                                        <Text>{ subSkill.skill } - { subSkill.level }</Text>
-                                        <ClipPath subSkill={ subSkill.skill } level={ subSkill.level } color1={ subSkill.color1 } color2={ subSkill.color2 } />
+                                        <Text>{ skill.skill } - { skill.level }</Text>
+                                        <ClipPath skill={ skill.skill } level={ skill.level } color1={ skill.color1 } color2={ skill.color2 } />
                                     </LevelUpContainer>
                                 </LevelUpBackground>
-                            }</div>;
-                        })
-                    }
+                            </SkillContainer>
+                            {
+                                openAccordion[ idx ].subjects[ idx2 ].expanded &&
 
-                </div>
-            );
-        });
-        return skillsMapped;
-    }
+                                skill.subskills.map((subSkill, idx2) => {
+                                    return <div key={ idx2 } style={ { marginLeft: "4rem" } }>{
+
+                                        <LevelUpBackground style={ { width: "100%", justifySelf: "end" } }>
+                                            <LevelUpContainer>
+                                                <Text>{ subSkill.skill } - { subSkill.level }</Text>
+                                                <ClipPath subSkill={ subSkill.skill } level={ subSkill.level } color1={ subSkill.color1 } color2={ subSkill.color2 } />
+                                            </LevelUpContainer>
+                                        </LevelUpBackground>
+                                    }</div>;
+                                })
+                            }
+                        </div>;
+                    })
+                }
+            </div>
+        );
+    });
+
 
 
     return (
-        <Section id="section4">
+        <Section id="section2">
             <SectionDivider />
             <SectionTitle main>Skills</SectionTitle>
             <div style={ { width: "88%", alignSelf: "center" } }>
-                <div>Languages</div>
-                { DisplaySkills(languageSkills) }
-                <div>Web & App Development</div>
-                { DisplaySkills(webSkills) }
-                <div>Game Development</div>
-                { DisplaySkills(gameSkills) }
-                <div>Computer Science</div>
-                { DisplaySkills(webSkills) }
+                { skillsMapped }
             </div>
         </Section >
     )

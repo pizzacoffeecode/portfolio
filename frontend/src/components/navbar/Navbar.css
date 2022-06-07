@@ -199,6 +199,9 @@ nav ul li div:hover {
     color: #ff275f;
 }
 
+.nav__social {
+    display: none;
+}
 
 .mouse_icon__container {
     display: grid;
@@ -235,6 +238,10 @@ nav ul li div:hover {
     animation: heartbeat 1.5s steps(3, start) 3s infinite both;
 }
 
+
+.nav {
+    margin-right: -3rem;
+}
 
 
 
@@ -325,6 +332,14 @@ nav ul li div:hover {
         to {
             filter: blur(100px);
         }
+    }
+}
+
+
+
+@media only screen and (min-width: 1280px) {
+    .nav__social {
+        display: unset;
     }
 }
 

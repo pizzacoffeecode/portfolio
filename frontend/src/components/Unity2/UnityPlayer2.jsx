@@ -64,7 +64,7 @@ export function UnityPlayer2() {
                         <SectionText style={ { marginLeft: "2.5rem" } }>*iOS not currently supported</SectionText>                    </TitleContent>
                     <UtilityList style={ { justifyContent: "center", marginBottom: "3rem" } }>
                         <Link to="/"><ExternalLinks style={ { margin: "0 0.8rem" } }>Back</ExternalLinks></Link>
-                        <a href="https://github.com" target="_blank"><ExternalLinks style={ { margin: "0 0.8rem" } }>Code</ExternalLinks></a>
+                        <a href="https://github.com" target="_blank" rel="noreferrer"><ExternalLinks style={ { margin: "0 0.8rem" } }>Code</ExternalLinks></a>
                     </UtilityList>
                 </BlogCardFG>
             </UnityBlogCardBG>

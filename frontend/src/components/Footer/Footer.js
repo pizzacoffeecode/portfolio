@@ -9,7 +9,7 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:314-343-3432" style={ { textDecoration: "none" } }>+1 267 - 428 - 9187</LinkItem>
+          <LinkItem href="tel:314-343-3432" style={ { textDecoration: "none", letterSpacing: "3px" } }>+1 267-428-9187</LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
@@ -27,7 +27,7 @@ const Footer = () => {
           <SocialIcons href="https://github.com/Fireal1983">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://google.com">
+          <SocialIcons href="https://www.linkedin.com/in/david-roberts-720a95240">
             <AiFillLinkedin size="3rem" />
           </SocialIcons>
           <SocialIcons href="https://discord.gg/VNA7z9Fd3b">

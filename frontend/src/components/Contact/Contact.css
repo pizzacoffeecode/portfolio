@@ -1,0 +1,62 @@
+.contact__container {
+    display: grid;
+    max-height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0 5rem 0;
+}
+
+.icon__container {
+    display: grid;
+    aspect-ratio: 1/1;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid azure;
+    border-radius: 10px;
+    padding: 3rem;
+    margin: 1rem 1rem 1rem 1rem;
+    font-size: 1rem;
+    color: azure;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.icon__container:hover {
+    /* -webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+    cursor: pointer;
+    color: #ff275f;
+    border-color: #ff275f;
+
+    transition: 0.5s;
+
+    transform: scale(1);
+
+
+
+
+}
+
+.icon__container svg {
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .contact__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-height: 30vh;
+
+    }
+
+    .icon__container {
+        aspect-ratio: unset;
+        font-size: 1.5rem;
+        size: 6rem;
+    }
+}

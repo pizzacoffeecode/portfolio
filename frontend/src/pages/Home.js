@@ -6,6 +6,7 @@ import { Hero, About, Coffee, Projects, LevelUpSection } from './index';
 
 
 import './Home.css';
+import Contact from '../components/Contact/Contact';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <LevelUpSection />
             <Coffee />
             <Projects />
+            <Contact />
         </HomeWrapper>
     )
 }

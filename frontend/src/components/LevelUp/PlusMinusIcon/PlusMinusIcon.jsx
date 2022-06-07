@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { PlusIcon, MinusIcon } from './PlusMinusIconStyles';
 
-const PlusMinusIcon = ({ handleExpand, id, show }) => {
-    const [ isOpen, setIsOpen ] = useState()
-
+const PlusMinusIcon = ({ handleExpand, skillId, subjectId, openState }) => {
+    const [ isOpen, setIsOpen ] = useState(false)
 
     useEffect(() => {
-        handleExpand(isOpen, id)
-    }, [ isOpen ])
+        handleExpand(skillId, subjectId, isOpen)
+    }, [ isOpen ]) // eslint-disable-line react-hooks/exhaustive-deps
+
+    // const onClicked = useCallback(() => {
+    //     handleExpand(skillId, subjectId, isOpen)
+    // }, [ isOpen ]);
+
+
 
 
     return (
-        <div type="button" onClick={ (e) => { setIsOpen(!isOpen); } }>
+        <div type="button" onClick={ () => { setIsOpen(!openState) } }>
             {
                 !isOpen ? (
                     <PlusIcon src={ `${ process.env.PUBLIC_URL }/images/plus_icon.svg` } />
