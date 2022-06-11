@@ -42,7 +42,8 @@ border-radius: 10px;
 `
 
 export const Text = styled.p`
-font-family: var(--font-button);
+/* font-family: var(--font-button); */
+font-family: "Aquire";
 color: black;
 position: absolute;
 

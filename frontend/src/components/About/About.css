@@ -9,3 +9,30 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+blockquote {
+    quotes: "“", "”", "‘", "’";
+
+}
+
+.qoute {
+    text-indent: -0.45em;
+    margin: 1rem 4rem;
+}
+
+/* If there's support, erase the indent and use the property instead */
+@supports (hanging-punctuation: first) {
+    blockquote {
+        text-indent: 0;
+        margin: 1rem 1rem;
+        hanging-punctuation: first;
+    }
+}

@@ -1,12 +1,13 @@
 :root {
-  --font-button: 'Aquire', sans-serif;
+  /* --font-button: 'Aquire', sans-serif; */
 }
+
 
 
 @font-face {
   font-family: 'Aquire';
-  src: url("http://fonts.cdnfonts.com/css/aquire");
-  font-display: optional;
+  src: local("Aquire"), url("./fonts/Aquire.otf") format("truetype");
+  font-display: initial;
 }
 
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { SectionText, SectionTitle } from '../Section/Section';
 import Button from '../Button/Button';
@@ -22,7 +22,7 @@ const Hero = () => {
         });
     }, [])
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         setLoaded(true);
     }, [])
 
@@ -37,7 +37,7 @@ const Hero = () => {
                         { "I'm David" }
                     </SectionTitle>
                     <SectionText>
-                        { "Aspiring Web, and Application Developer" }
+                        { "Web and Mobile Application Developer" }
                     </SectionText>
                     <Button>{ "Learn More" }</Button>
                 </div>

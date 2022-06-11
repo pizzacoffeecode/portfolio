@@ -9,7 +9,7 @@ import { mediaQueries } from '../../services/data';
 
 import HamburgerSpin from '../Hamburger/HamburgerSpin';
 
-import mouseicon from '../../assets/mouse.png';
+
 
 import './Navbar.css';
 import { SocialContainer, SocialIcons } from './NavbarStyles';
@@ -25,20 +25,34 @@ const Navbar = () => {
     const { laptop } = mediaQueries;
 
     const [ isOpen, setOpen ] = useState(false);
-    const [ isSticky, setSticky ] = useState(false);
+    // const [ isSticky, setSticky ] = useState(false);
     const [ mouseIconClicked, setMouseIconClicked ] = useState(false);
 
-    // //? Close Initial Full Page Hero
+    // Landing Page Scroll or Mouse Icon clicked
     useEffect(() => {
+        function GetWindowSize() {
+            return window.scrollY > 0;
+        }
+
+        if (mouseIconClicked) {
+
+            document.querySelector('header').classList.toggle('sticky');
+            document.getElementById("mouse_icon_id").style.display = "none";
+            setScrolled(true);
+        }
+
         window.addEventListener("scroll", function () {
             const header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY >= 0);
+
+            header.classList.toggle('sticky', GetWindowSize);
             // this.window.scrollY > 0 ? setSticky(true) : setSticky(false);
             // header.classList.toggle('sticky', window.onclick);
-            setSticky(true);
+            // setSticky(true);
         });
-    }, []);
-
+        return () => {
+            window.removeEventListener('sticky', GetWindowSize);
+        };
+    }, [ mouseIconClicked ]);
 
     //? Keep Scroll at position
     const [ scrolled, setScrolled ] = useState(false)
@@ -46,11 +60,10 @@ const Navbar = () => {
 
         if (window.scrollY > 0) {
             window.scroll({
-                top: 1,
+                top: 0,
                 left: 0,
                 behavior: 'auto'
             });
-            console.log(event);
             document.getElementById("mouse_icon_id").style.display = "none";
             setTimeout(() => { setScrolled(true) }, 500);
         }
@@ -64,10 +77,10 @@ const Navbar = () => {
         }
 
         return () => window.removeEventListener("scroll", handleScroll)
-    }, [ scrolled, handleScroll ])
+    }, [ scrolled, handleScroll, mouseIconClicked ])
 
 
-    //? Hamburger clicked or Window resized
+    //? Hamburger clicked 
     useEffect(() => {
         const navigation = document.querySelector('nav')
         // Hamburger clicked
@@ -81,17 +94,6 @@ const Navbar = () => {
             // navigation.classList.toggle('active');
         }
     }, [ width, laptop ]);
-
-
-    //? Landing : Mouse Icon clicked
-    useEffect(() => {
-        if (mouseIconClicked) {
-            document.querySelector('header').classList.toggle('sticky');
-            document.getElementById("mouse_icon_id").style.display = "none";
-            setScrolled(true);
-            setSticky(true);
-        }
-    }, [ mouseIconClicked ]);
 
     //? Collapse modal on link press
     useEffect(() => {
@@ -116,37 +118,31 @@ const Navbar = () => {
         <header>
             <div className='banner'>
                 <div className={ 'mouse_icon__container' } id={ "mouse_icon_id" }>
-                    <button className='mouse_icon__button' type="button" onClick={ () => {
+                    <div className='mouse_icon__button' type="button" onClick={ () => {
                         setMouseIconClicked(true);
-                    } }>
-                        <img className="mouse_icon" src={ mouseicon } alt="mouse icon" />
-                    </button>
+                    } } >
+                    </div>
                 </div>
             </div>
             <div className="banner__overlay" />
             <Link to="/" className="logo" onClick={ () => window.scrollTo(0, 0) }>
                 <span className='title__bg'>
-                    <span style={ { color: 'gray' } }>David</span>
-                    <span className="bush">Roberts.</span>
+                    <span style={ { color: 'gray' } }>DAVID</span>
+                    <span className="bush">ROBERTS.</span>
                 </span>
                 <span className="bushen__bg">ROBERTS.</span>
             </Link>
             <div className="toggle">
-                {
-                    width < laptop && isSticky &&
-                    <HamburgerSpin toggled={ isOpen } toggle={ setOpen } />
-                }
+                <HamburgerSpin toggled={ isOpen } toggle={ setOpen } />
             </div>
             <nav className="nav">
                 <ul className="nav__navlink">
                     {/* <li><div className="nav__navlink" >Home</div></li> */ }
                     <li><Link className="nav__navlink" to="/" onClick={ () => window.scrollTo(0, 0) }>Home</Link></li>
                     <li><div className="nav__navlink">About</div></li>
-                    <li><div className="nav__navlink"  >Skills</div></li>
-                    <li><div className="nav__navlink" >Projects</div></li>
-
-                    <li><div className="nav__navlink" >Contact</div></li>
-
+                    <li><div className="nav__navlink">Skills</div></li>
+                    <li><div className="nav__navlink">Projects</div></li>
+                    <li><div className="nav__navlink">Contact</div></li>
                 </ul>
                 <div className="nav__social">
                     <SocialContainer>
@@ -162,9 +158,7 @@ const Navbar = () => {
                     </SocialContainer>
                 </div >
             </nav >
-
         </header >
-
     )
 }
 

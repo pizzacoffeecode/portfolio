@@ -6,8 +6,18 @@ import Theme from './styles/theme';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ViewportProvider from './components/Resize/Resize';
-
+import './fonts/Aquire.otf';
 import './index.css';
+
+
+// useEffect(() => {
+//   WebFont.load({
+//     google: {
+//       families: [ 'Droid Sans', 'Chilanka' ]
+//     }
+//   });
+// }, []);
+
 
 ReactDOM.render(
 

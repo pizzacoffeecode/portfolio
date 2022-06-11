@@ -17,10 +17,12 @@ header .banner {
     position: absolute;
     top: 0;
     left: 0;
+    background-size: 200%;
+    background-position: 30% 100%;
     width: 100vw;
     height: 100%;
-    object-fit: cover;
-    background-repeat: repeat;
+    /* object-fit: cover; */
+    background-repeat: no-repeat;
     background-image: url('../../assets/bg_black.webp'),
         linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 100%);
     opacity: 1;
@@ -46,7 +48,8 @@ header .logo {
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
-    font-family: var(--font-button);
+    /* font-family: var(--font-button); */
+    font-family: "Aquire";
     font-size: 10vw;
     color: #fff;
     font-weight: 700;
@@ -79,7 +82,7 @@ nav {
 }
 
 nav ul {
-    font-family: var(--font-button);
+    font-family: "Aquire";
     position: relative;
     display: flex;
     transition: 0.25s;
@@ -119,38 +122,37 @@ nav ul li div {
     opacity: 0;
 }
 
-.mouse_icon__container {
+header .toggle {
+    opacity: 0;
+    display: none;
+}
+
+#mouse_icon_id {
+    position: absolute;
     display: grid;
     z-index: 11;
-    position: fixed;
-    justify-self: center;
-    align-items: center;
-    top: 80vh;
-    margin: 0 auto;
+    top: 75vh;
     width: 100vw;
 }
 
 .mouse_icon__button {
-    width: 100px;
+    display: flex;
+    background-size: 100%;
+    min-width: 50px;
+    max-width: 80px;
+    aspect-ratio: 1/1;
+    background-image: url("../../assets/mouse.png");
+    background-repeat: no-repeat;
     justify-self: center;
     border: none;
-    background: none;
+
     cursor: pointer;
-    margin: 0;
-    padding: 0;
+    -webkit-animation: heartbeat 1.5s steps(3, start) 3s infinite both;
+    animation: heartbeat 1.5s steps(3, start) 3s infinite both;
 }
 
 .mouse_icon__button:hover {
     cursor: pointer;
-}
-
-.mouse_icon {
-    display: flex;
-    width: 100px;
-    justify-self: center;
-
-    -webkit-animation: heartbeat 1.5s steps(3, start) 3s infinite both;
-    animation: heartbeat 1.5s steps(3, start) 3s infinite both;
 }
 
 
@@ -197,6 +199,12 @@ header.sticky .nav__social {
     transition-delay: 0.2s;
 }
 
+header.sticky .toggle {
+    transition: 1s;
+    opacity: 1;
+    display: unset;
+}
+
 /* NAV DESKTOP : FULL PAGE INTRO */
 @media only screen and (max-width: 1025px) {
     header {
@@ -209,17 +217,15 @@ header.sticky .nav__social {
         visibility: hidden;
     }
 
-    .mouse_icon__container {
-        top: 82.5vh;
+    #mouse_icon_id {
+        top: 80vh;
     }
 
     .mouse_icon__button {
-        width: 80px;
+        min-width: 140px;
+        max-width: 145px;
     }
 
-    .mouse_icon {
-        width: 80px;
-    }
 
 
     /* NAV DESKTOP : STICKY */
@@ -265,6 +271,31 @@ header.sticky .nav__social {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+}
+
+
+@media only screen and (min-width: 1025px) {
+    header .toggle {
+        display: none;
+    }
+
+    header.sticky .toggle {
+        display: none;
+    }
+
+    header .banner {
+        background-size: 140%;
+        background-position: 30% 40%;
+    }
+
+    #mouse_icon_id {
+        top: 80vh;
+    }
+
+    .mouse_icon__button {
+        min-width: 130px;
+        max-width: 135px;
     }
 }
 

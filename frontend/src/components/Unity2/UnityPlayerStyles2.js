@@ -62,7 +62,8 @@ export const TitleContent = styled.div`
 
 
 export const HeaderThree = styled.h3`
-  font-family: var(--font-button);
+  /* font-family: var(--font-button); */
+  font-family: "Aquire";
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;

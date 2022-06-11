@@ -226,7 +226,8 @@ width: ${ ({ alt }) => alt ? '150px' : '262px' };
 height: ${ ({ alt }) => alt ? '52px' : '64px' };
 border-radius: 50px;
 
-font-family: var(--font-button);
+/* font-family: var(--font-button); */
+font-family: "Aquire";
 font-size: ${ ({ alt }) => alt ? '20px' : '24px' };
 font-weight: 600;
 display: flex;
@@ -279,7 +280,8 @@ background: #000000;
 opacity: ${ ({ disabled }) => disabled ? '.5' : '1' };
 transition: .4s ease;
 
-font-family: var(--font-button);
+/* font-family: var(--font-button); */
+font-family: "Aquire";
 font-size: ${ ({ alt }) => alt ? '20px' : '24px' };
 font-weight: 600;
 align-items: center;

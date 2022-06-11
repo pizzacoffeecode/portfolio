@@ -21,8 +21,8 @@ export const Skills = [
             },
             {
                 expanded: false,
-                skill: "TypeScript",
-                level: 3,
+                skill: "TypeScript (in-progress)",
+                level: 4,
                 color1: "rgba(255, 235, 59, 1)",
                 color2: "rgba(31, 255, 0, 1)",
                 subskills: []
@@ -30,7 +30,7 @@ export const Skills = [
             {
                 expanded: false,
                 skill: "MySQL / MongoDB",
-                level: 3,
+                level: 6,
                 color1: "rgba(255, 235, 59, 1)",
                 color2: "rgba(31, 255, 0, 1)",
                 subskills: []
@@ -48,14 +48,74 @@ export const Skills = [
                 color2: "rgba(250, 0, 255, 1)",
                 subskills: [
                     {
-                        skill: "Form Validation",
-                        level: 5,
+                        skill: "Request & Response",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Validation",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Serving static files",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Http methods",
+                        level: 6,
                         color1: "rgba(0, 194, 255, 0.8)",
                         color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "POST / CRUD",
-                        level: 8,
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "url building",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Middleware",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Authentication",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Restful-APIs",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Error handling",
+                        level: 6,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Unit Testing",
+                        level: 4,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Routing",
+                        level: 6,
                         color1: "rgba(0, 194, 255, 0.8)",
                         color2: "rgba(250, 0, 255, 0.8)",
                     }
@@ -67,7 +127,86 @@ export const Skills = [
                 level: 9,
                 color1: "rgba(0, 194, 255, 1)",
                 color2: "rgba(250, 0, 255, 1)",
-                subskills: []
+                subskills: [
+                    {
+                        skill: "Class & Functional Components",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Hooks",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "JSX spread & Destructing",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Form Validation & Handling",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Routing",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "State",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Props",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Lists & Keys",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Life Cycle Methods",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Conditional Rendering",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Portals",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Styling & Theming",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "React Patterns",
+                        level: 9,
+                        color1: "rgba(0, 194, 255, 0.8)",
+                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                ]
             },
             {
                 expanded: false,

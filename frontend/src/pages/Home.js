@@ -7,11 +7,13 @@ import { Hero, About, Coffee, Projects, LevelUpSection } from './index';
 
 import './Home.css';
 import Contact from '../components/Contact/Contact';
+import Navbar from './../components/Navbar/Navbar';
 
 
 const Home = () => {
     return (
         <HomeWrapper>
+            <Navbar />
             <Hero />
             <About />
             <LevelUpSection />

@@ -34,12 +34,9 @@ const LevelUpSection = () => {
 
 
     function handleExpand(skillId, subjectId, openState) {
-        // console.log("event = " + event + " skillId = " + skillId + " subjectId = " + subjectId);
         const tempArray = [ ...openAccordion ];
         tempArray[ skillId ].subjects[ subjectId ].expanded = openState;
         setOpenAccordion(tempArray);
-
-        console.log("accordian" + openAccordion);
     }
 
 
@@ -76,7 +73,7 @@ const LevelUpSection = () => {
                                         <LevelUpBackground style={ { width: "100%", justifySelf: "end" } }>
                                             <LevelUpContainer>
                                                 <Text>{ subSkill.skill } - { subSkill.level }</Text>
-                                                <ClipPath subSkill={ subSkill.skill } level={ subSkill.level } color1={ subSkill.color1 } color2={ subSkill.color2 } />
+                                                <ClipPath subSkill={ subSkill.skill } level={ subSkill.level } color1={ skill.color1 } color2={ skill.color2 } />
                                             </LevelUpContainer>
                                         </LevelUpBackground>
                                     }</div>;

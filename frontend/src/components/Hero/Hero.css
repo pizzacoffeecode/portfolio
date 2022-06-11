@@ -7,6 +7,7 @@
     /* background-color: #000; */
 }
 
+
 .left_top__section {
     display: grid;
     align-items: center;
@@ -51,6 +52,10 @@
 
     .right_btm__section {
         height: 100%;
+    }
+
+    .left_top__content {
+        margin-left: 4.5rem;
     }
 
     right_btm__content {
