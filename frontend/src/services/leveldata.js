@@ -6,33 +6,33 @@ export const Skills = [
             {
                 expanded: false,
                 skill: "C#",
-                level: 7,
-                color1: "rgba(255, 235, 59, 1)",
-                color2: "rgba(31, 255, 0, 1)",
+                level: 8,
+                color1: "rgba(31, 255, 0, 1)",
+                color2: "rgba(31, 200, 0, 1)",
                 subskills: []
             },
             {
                 expanded: false,
                 skill: "Javascript",
-                level: 7,
-                color1: "rgba(255, 235, 59, 1)",
-                color2: "rgba(31, 255, 0, 1)",
+                level: 8,
+                color1: "rgba(31, 255, 0, 1)",
+                color2: "rgba(31, 200, 0, 1)",
                 subskills: []
             },
             {
                 expanded: false,
                 skill: "TypeScript (in-progress)",
-                level: 4,
-                color1: "rgba(255, 235, 59, 1)",
-                color2: "rgba(31, 255, 0, 1)",
+                level: 6,
+                color1: "rgba(31, 255, 0, 1)",
+                color2: "rgba(31, 200, 0, 1)",
                 subskills: []
             },
             {
                 expanded: false,
                 skill: "MySQL / MongoDB",
                 level: 6,
-                color1: "rgba(255, 235, 59, 1)",
-                color2: "rgba(31, 255, 0, 1)",
+                color1: "rgba(31, 255, 0, 1)",
+                color2: "rgba(31, 200, 0, 1)",
                 subskills: []
             },
         ],
@@ -50,74 +50,50 @@ export const Skills = [
                     {
                         skill: "Request & Response",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Validation",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Serving static files",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Http methods",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "POST / CRUD",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "url building",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Middleware",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Authentication",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Restful-APIs",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Error handling",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Unit Testing",
                         level: 4,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Routing",
                         level: 6,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     }
                 ],
             },
@@ -129,105 +105,62 @@ export const Skills = [
                 color2: "rgba(250, 0, 255, 1)",
                 subskills: [
                     {
-                        skill: "Class & Functional Components",
+                        skill: "Functional Components",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
+                    },
+                    {
+                        skill: "Class Components",
+                        level: 6,
                     },
                     {
                         skill: "Hooks",
-                        level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
+                        level: 8,
                     },
                     {
-                        skill: "JSX spread & Destructing",
+                        skill: "Spread & Destructing",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
-                        skill: "Form Validation & Handling",
+                        skill: "Form Validation",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Routing",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "State",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Props",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Lists & Keys",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Life Cycle Methods",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Conditional Rendering",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Portals",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "Styling & Theming",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                     {
                         skill: "React Patterns",
                         level: 9,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
                     },
                 ]
-            },
-            {
-                expanded: false,
-                skill: "React Native",
-                level: 6,
-                color1: "rgba(0, 194, 255, 1)",
-                color2: "rgba(250, 0, 255, 1)",
-                subskills: [
-                    {
-                        skill: "Create-React-App",
-                        level: 7,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
-                    },
-                    {
-                        skill: "Expo",
-                        level: 7,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
-                    }
-                ],
             },
             {
                 expanded: false,
@@ -268,6 +201,27 @@ export const Skills = [
                 color1: "rgba(0, 194, 255, 1)",
                 color2: "rgba(250, 0, 255, 1)",
                 subskills: []
+            },
+            {
+                expanded: false,
+                skill: "Styling",
+                level: 8,
+                color1: "rgba(0, 194, 255, 1)",
+                color2: "rgba(250, 0, 255, 1)",
+                subskills: [
+                    {
+                        skill: "CSS",
+                        level: 8,
+                    },
+                    {
+                        skill: "SCSS / SASS",
+                        level: 7,
+                    },
+                    {
+                        skill: "Styled Components",
+                        level: 8,
+                    },
+                ]
             }
         ],
     },
@@ -278,44 +232,32 @@ export const Skills = [
                 expanded: false,
                 skill: "Data Structures",
                 level: 3,
-                color1: "rgba(255, 235, 59, 1)",
-                color2: "rgba(31, 255, 0, 1)",
+                color1: "rgba(31, 255, 0, 1)",
+                color2: "rgba(31, 200, 0, 1)",
                 subskills: [
                     {
                         skill: "Arrays & Lists",
                         level: 8,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Stacks & Queues",
                         level: 8,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
-                        skill: "Dictioniaries & Hashtables",
+                        skill: "Dict / Hashtables",
                         level: 8,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Sets",
                         level: 1,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Binary Tree",
                         level: 3,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Graphs",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                 ]
             },
@@ -323,38 +265,28 @@ export const Skills = [
                 expanded: false,
                 skill: "Design Patterns",
                 level: 5,
-                color1: "rgba(255, 235, 59, 1)",
-                color2: "rgba(31, 255, 0, 1)",
+                color1: "rgba(31, 255, 0, 1)",
+                color2: "rgba(31, 200, 0, 1)",
                 subskills: [
                     {
                         skill: "Observer Pattern",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Singleton",
                         level: 8,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "State Pattern",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Object pooling",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Finite State Machine",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                 ]
             },
@@ -362,61 +294,57 @@ export const Skills = [
                 expanded: false,
                 skill: "Algorithms",
                 level: 3,
-                color1: "rgba(255, 235, 59, 1)",
-                color2: "rgba(31, 255, 0, 1)",
+                color1: "rgba(31, 255, 0, 1)",
+                color2: "rgba(31, 200, 0, 1)",
                 subskills: [
                     {
                         skill: "A*",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Dijkstra's Algorithm",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
-                        skill: "Greedy Best First Search",
+                        skill: "Greedy Best First",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                     {
                         skill: "Breadth First Search",
                         level: 5,
-                        color1: "rgba(255, 235, 59, 1)",
-                        color2: "rgba(31, 255, 0, 1)",
                     },
                 ],
             },
         ],
     },
     {
-        title: "Game Development",
+        title: "Version Control",
         subjects: [
             {
                 expanded: false,
-                skill: "Unity Engine",
+                skill: "GitHub CLI / GUI",
                 level: 7,
                 color1: "rgba(0, 194, 255, 0.8)",
                 color2: "rgba(250, 0, 255, 0.8)",
-                subskills: [
-                    {
-                        skill: "UI",
-                        level: 8,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
-                    },
-                    {
-                        skill: "Animation",
-                        level: 8,
-                        color1: "rgba(0, 194, 255, 0.8)",
-                        color2: "rgba(250, 0, 255, 0.8)",
-                    },
-                ]
-            }
-        ],
+                subskills: []
+            },
+            {
+                expanded: false,
+                skill: "Source Tree",
+                level: 7,
+                color1: "rgba(0, 194, 255, 0.8)",
+                color2: "rgba(250, 0, 255, 0.8)",
+                subskills: []
+            },
+            {
+                expanded: false,
+                skill: "Git Kraken",
+                level: 7,
+                color1: "rgba(0, 194, 255, 0.8)",
+                color2: "rgba(250, 0, 255, 0.8)",
+                subskills: []
+            },
+        ]
+
     }
 ];

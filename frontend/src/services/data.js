@@ -8,6 +8,16 @@ export const mediaQueries = {
 
 export const projects = [
     {
+        title: 'Flappy Bird 100% React Native',
+        description: "A re-creation of the game Flappy Bird created solely in React Native, no game engine. For this project I wanted to test out generating a PWA from a React Native App",
+        image: 'flappy-bird.jpg',
+        tags: [ 'React Native', '', 'React-Native-Web' ],
+        source: '/flappy',
+        visit: 'https://github.com',
+        newWindow: false,
+        id: 0,
+    },
+    {
         title: 'AB Academy',
         description: "A website for a local soccer coach, including a scheduling api and contact form. The clients website required many videos, so reducing load times down was critical. Good NextJs practices along with a serious amount of video and image optimization got the website a 100% perfomance score on lighthouse.",
         image: 'ab2.webp',
@@ -18,16 +28,6 @@ export const projects = [
         id: 0,
     },
     {
-        title: 'Sports Betting Blog',
-        description: "A sports betting blog utilizing Graph CMS as a user accessible backend. Both the front and backend were built in NextJs",
-        image: 'blog.webp',
-        tags: [ 'Next Js', 'Graph CMS', 'GraphQL' ],
-        source: 'https://graphcms-blog-blush.vercel.app',
-        visit: 'https://github.com/Fireal1983/graphcms_blog',
-        newWindow: true,
-        id: 1,
-    },
-    {
         title: 'Uber Clone',
         description: "A challenge to see if I could implement some the core functionality of the Uber app in a react native project with Redux handling the state. The project is a WIP featuring google location services, triangulation, routing, and cost calculation. The next step will be to add location on press and start the uber eats section",
         image: 'uber.webp',
@@ -36,6 +36,16 @@ export const projects = [
         visit: 'https://github.com',
         newWindow: false,
         id: 2,
+    },
+    {
+        title: 'Sports Betting Blog',
+        description: "A sports betting blog utilizing Graph CMS as a user accessible backend. Both the front and backend were built in NextJs",
+        image: 'blog.webp',
+        tags: [ 'Next Js', 'Graph CMS', 'GraphQL' ],
+        source: 'https://graphcms-blog-blush.vercel.app',
+        visit: 'https://github.com/Fireal1983/graphcms_blog',
+        newWindow: true,
+        id: 1,
     },
     {
         title: 'Search & Pathing Algorithms',

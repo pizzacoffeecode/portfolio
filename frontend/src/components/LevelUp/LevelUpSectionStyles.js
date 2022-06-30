@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const SkillContainer = styled.div`
 display: grid;
-grid-template-columns: 40px 1fr;
+grid-template-columns: 25px 1fr;
 grid-template-rows: auto 1fr;
 height: fit-content;
 align-items: center;
@@ -10,7 +10,7 @@ transition: 2s;
 `
 export const SubSkillContainer = styled.div`
 display: grid;
-grid-template-columns: 40px 1fr;
+grid-template-columns: 1fr;
 grid-template-rows: auto 1fr;
 height: fit-content;
 
@@ -44,19 +44,15 @@ border-radius: 10px;
 export const Text = styled.p`
 /* font-family: var(--font-button); */
 font-family: "Aquire";
-color: black;
+color: whitesmoke;
 position: absolute;
-
 font-size: 18px;
-
 padding: 0 0 0 1rem;
 z-index: 5;
-
 @media ${ props => props.theme.breakpoints.sm } {
 		font-size: 14px;
 	}
 `
-
 
 export const ClipPath = styled.img`
 position: relative;

@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { Section, SectionDivider, SectionTitle } from './../Section/Section';
 import { HeaderThree } from "../Projects/ProjectsStyles";
-import { Skills } from './leveldata';
+import { Skills } from '../../services/leveldata';
 import { LevelUpContainer, LevelUpBackground, Text, ClipPath, SkillContainer } from './LevelUpSectionStyles';
 import PlusMinusIcon from './PlusMinusIcon/PlusMinusIcon';
-
-
 
 const LevelUpSection = () => {
     const skillsArr = [ ...Skills ];
@@ -27,11 +25,6 @@ const LevelUpSection = () => {
     //         });
     //     }
     // }, [])
-
-
-
-
-
 
     function handleExpand(skillId, subjectId, openState) {
         const tempArray = [ ...openAccordion ];
@@ -68,7 +61,7 @@ const LevelUpSection = () => {
                                 openAccordion[ idx ].subjects[ idx2 ].expanded &&
 
                                 skill.subskills.map((subSkill, idx2) => {
-                                    return <div key={ idx2 } style={ { marginLeft: "4rem" } }>{
+                                    return <div key={ idx2 } style={ { marginLeft: "2.5rem" } }>{
 
                                         <LevelUpBackground style={ { width: "100%", justifySelf: "end" } }>
                                             <LevelUpContainer>

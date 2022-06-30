@@ -4,7 +4,7 @@ import { Section } from '../Section/Section';
 import { BlogCardBG, BlogCardFG, TitleContent, HeaderThree, Hr, UtilityList, ExternalLinks, GridContainer } from '../Projects/ProjectsStyles';
 import './Appetize.css';
 
-const Appetize = () => {
+const Appetize = ({ iframe, title }) => {
     return (
         <Section id="uber_app" style={ { marginBottom: "10rem" } }>
             {/* <SectionDivider divider /> */ }
@@ -14,12 +14,12 @@ const Appetize = () => {
                     <BlogCardFG >
                         <div className="appetize__container" >
                             <iframe title="appetizeFrame" className="appetize__frame"
-                                src="https://appetize.io/embed/hejn72htgt1uap3u0dcaq2bam4?device=iphone8"
+                                src={ iframe }
                                 width="auto" height="625px" frameborder="0" scrolling="no">
                             </iframe>
                         </div>
                         <TitleContent>
-                            <HeaderThree title>{ "Uber Clone" }</HeaderThree>
+                            <HeaderThree title>{ title }</HeaderThree>
                             <Hr />
                         </TitleContent>
                         <UtilityList style={ { justifyContent: "center" } }>

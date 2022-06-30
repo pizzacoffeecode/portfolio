@@ -128,12 +128,12 @@ const Navbar = () => {
             <Link to="/" className="logo" onClick={ () => window.scrollTo(0, 0) }>
                 <span className='title__bg'>
                     <span style={ { color: 'gray' } }>DAVID</span>
-                    <span className="bush">ROBERTS.</span>
+                    <span className="roberts">ROBERTS.</span>
                 </span>
-                <span className="bushen__bg">ROBERTS.</span>
+                <span className="roberts__bg">ROBERTS.</span>
             </Link>
             <div className="toggle">
-                <HamburgerSpin toggled={ isOpen } toggle={ setOpen } />
+                <HamburgerSpin toggled={ isOpen } toggle={ setOpen } styles={ { marginRight: "-1rem", paddingLeft: "1rem" } } />
             </div>
             <nav className="nav">
                 <ul className="nav__navlink">

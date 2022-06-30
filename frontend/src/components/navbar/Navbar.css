@@ -57,7 +57,7 @@ header .logo {
     text-decoration: none;
 }
 
-header .bush {
+header .roberts {
     position: absolute;
     background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1));
     /* color: #ff275f; */
@@ -65,7 +65,7 @@ header .bush {
     -webkit-text-fill-color: transparent;
 }
 
-header .bushen__bg {
+header .roberts__bg {
     background: linear-gradient(45deg, rgba(0, 194, 255, 1), rgba(250, 0, 255, 1));
     filter: blur(25px);
     opacity: 0.5;
@@ -129,30 +129,27 @@ header .toggle {
 
 #mouse_icon_id {
     position: absolute;
+    align-self: center;
+    justify-self: center;
     display: grid;
     z-index: 11;
-    top: 75vh;
+    top: 70vh;
     width: 100vw;
 }
 
 .mouse_icon__button {
     display: flex;
-    background-size: 100%;
-    min-width: 50px;
-    max-width: 80px;
-    aspect-ratio: 1/1;
-    background-image: url("../../assets/mouse.png");
-    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    align-self: center;
     justify-self: center;
+    aspect-ratio: 1/1;
+    background-image: url("../../assets/mouse_small.png");
+    background-repeat: no-repeat;
     border: none;
-
     cursor: pointer;
     -webkit-animation: heartbeat 1.5s steps(3, start) 3s infinite both;
     animation: heartbeat 1.5s steps(3, start) 3s infinite both;
-}
-
-.mouse_icon__button:hover {
-    cursor: pointer;
 }
 
 
@@ -189,8 +186,8 @@ header.sticky .logo {
     top: 50%;
     position: absolute;
     font-size: 1.5em;
-    left: 100px;
-    transform: translate(-0%, -50%);
+    left: 50px;
+    transform: translate(-5%, -50%);
 }
 
 header.sticky .nav__social {
