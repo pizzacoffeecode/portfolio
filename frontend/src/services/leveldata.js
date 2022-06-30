@@ -180,15 +180,7 @@ export const Skills = [
             },
             {
                 expanded: false,
-                skill: "CRUD",
-                level: 5,
-                color1: "rgba(0, 194, 255, 1)",
-                color2: "rgba(250, 0, 255, 1)",
-                subskills: []
-            },
-            {
-                expanded: false,
-                skill: "StyledDiv Library",
+                skill: "REST APIs",
                 level: 6,
                 color1: "rgba(0, 194, 255, 1)",
                 color2: "rgba(250, 0, 255, 1)",
