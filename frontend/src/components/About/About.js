@@ -3,7 +3,7 @@ import { Section, SectionTextFull, SectionTitle, SectionDivider } from '../Secti
 import "./About.css";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { HeaderThree } from './../Unity2/UnityPlayerStyles2';
+// import { HeaderThree } from './../Unity2/UnityPlayerStyles2';
 gsap.registerPlugin(ScrollToPlugin);
 
 
