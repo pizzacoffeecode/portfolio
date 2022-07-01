@@ -99,7 +99,7 @@ export const Skills = [
             },
             {
                 expanded: false,
-                skill: "React JS",
+                skill: "React",
                 level: 9,
                 color1: "rgba(0, 194, 255, 1)",
                 color2: "rgba(250, 0, 255, 1)",
