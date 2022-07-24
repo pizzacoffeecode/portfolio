@@ -24,7 +24,7 @@ const Footer = () => {
           <Slogan>Website Created in React JS by me</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/Fireal1983">
+          <SocialIcons href="https://github.com/pizzacoffeecode">
             <AiFillGithub size="3rem" />
           </SocialIcons>
           <SocialIcons href="https://www.linkedin.com/in/david-roberts-720a95240">
