@@ -33,7 +33,7 @@ export const projects = [
         image: 'uber.webp',
         tags: [ 'React Native', 'Redux', 'Google Location' ],
         source: '/uberclone',
-        visit: 'https://github.com/pizzacoffeecode/',
+        visit: 'https://github.com/pizzacoffeecode/uber_clone',
         newWindow: false,
         id: 2,
     },

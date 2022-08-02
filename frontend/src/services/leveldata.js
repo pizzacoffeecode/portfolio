@@ -337,6 +337,42 @@ export const Skills = [
                 subskills: []
             },
         ]
-
+    },
+    {
+        title: "Creative Applications",
+        subjects: [
+            {
+                expanded: false,
+                skill: "Illustrator",
+                level: 7,
+                color1: "rgba(0, 194, 255, 0.8)",
+                color2: "rgba(250, 0, 255, 0.8)",
+                subskills: []
+            },
+            {
+                expanded: false,
+                skill: "Photoshop",
+                level: 8,
+                color1: "rgba(0, 194, 255, 0.8)",
+                color2: "rgba(250, 0, 255, 0.8)",
+                subskills: []
+            },
+            {
+                expanded: false,
+                skill: "Figma",
+                level: 6,
+                color1: "rgba(0, 194, 255, 0.8)",
+                color2: "rgba(250, 0, 255, 0.8)",
+                subskills: []
+            },
+            {
+                expanded: false,
+                skill: "Zbrush (3D)",
+                level: 6,
+                color1: "rgba(0, 194, 255, 0.8)",
+                color2: "rgba(250, 0, 255, 0.8)",
+                subskills: []
+            },
+        ]
     }
 ];
